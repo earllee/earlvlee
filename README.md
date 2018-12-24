@@ -1,4 +1,4 @@
-#Earl V. Lee
+# Earl V. Lee
 
 Earl's personal website built using Gatsby.js
 
