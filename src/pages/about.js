@@ -1,9 +1,13 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 export default ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>About Earl</title>
+    </Helmet>
     <p>My name is Earl. This is my website. Find me on:</p>
     <ul>
       <li>

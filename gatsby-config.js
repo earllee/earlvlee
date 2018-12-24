@@ -4,9 +4,17 @@ module.exports = {
     altTitle: `EarlL.ee`
   },
   plugins: [
+    // Plugins
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`
+      }
+    },
 
+    // Sources
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,11 +22,8 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`
-      }
-    }
+
+    // Transformers
+    `gatsby-transformer-remark`
   ]
 };
