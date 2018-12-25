@@ -8,7 +8,20 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <img src="portrero-hill.jpg" alt="Group of pandas eating bamboo" />
+        <img src="portrero-hill.jpg" alt="Portrero Hill" />
+        {/* <img src="vietnamese-country-side.jpg" alt="Vietnamese country side" /> */}
+        {/* <img src="avalon-beach.jpg" alt="Avalon Beach" /> */}
+        {/* <img src="bamboo-trees.jpg" alt="Bamboo trees" /> */}
+        {/* <img src="half-dome.jpg" alt="Half Dome Yosemite Skyline" /> */}
+        {/* <img
+          src="la-belle-epoque.jpg"
+          alt="La Belle Epoque restaurant in Paris"
+        /> */}
+        {/* <img src="les-invalides.jpg" alt="Les Invalides in Paris" /> */}
+        {/* <img src="oculus.jpg" alt="Oculus in New York" /> */}
+        {/* <img src="paris-at-sunset.jpg" alt="Paris skyline at sunset" /> */}
+        {/* <img src="paris-skyline-during-day.jpg" alt="Paris skyline during day" /> */}
+        {/* <img src="reflection-in-mirror.jpg" alt="Reflection of Earl Lee and Sarah in the mirror" /> */}
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>

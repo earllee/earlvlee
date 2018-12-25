@@ -64,7 +64,7 @@ I firmly believe that habit is one of the most powerful determinants of hitting 
   - Track macros
 - Meet 50 new, interesting people
 - Complete 5 side projects
-  - Migrate [Toastable.com](http://Toastable.com) to my own hosting and give it a facelift without hampering SEO
+  - Migrate Toastable to my own hosting and give it a facelift without hampering SEO
   - Sell 10 photos for profit of at least \$500
   - More to come!
 - Try 5 new productive habits
