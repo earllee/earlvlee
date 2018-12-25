@@ -8,6 +8,7 @@ This is cool because everything including posts and photos will be packaged into
 
 # Roadmap
 
+- Restructure site into blog
 - Add randomized header image
 - Add about
 - Add social media profile icons

@@ -27,6 +27,10 @@ export default ({ children }) => (
       >
         <Helmet>
           <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="Earl Lee's personal website and blog."
+          />
           <title>Earl V. Lee</title>
           <link rel="canonical" href="http://earlvlee.com/" />
         </Helmet>
