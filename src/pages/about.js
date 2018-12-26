@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Layout from "../components/layout";
 
 export default ({ data }) => (
@@ -14,27 +15,27 @@ export default ({ data }) => (
     <p>
       Hi, my name is Earl Lee. I'm a <strong>product manager</strong> and{" "}
       <strong>earl-lee employee</strong> at{" "}
-      <a href="https://fiscalnote.com" rel="noopener noreferrer">
+      <OutboundLink href="https://fiscalnote.com" rel="noopener noreferrer">
         FiscalNote
-      </a>
+      </OutboundLink>
       . Previously, I interned at{" "}
-      <a href="https://google.com" rel="noopener noreferrer">
+      <OutboundLink href="https://google.com" rel="noopener noreferrer">
         Google
-      </a>{" "}
+      </OutboundLink>{" "}
       as a <strong>software engineer</strong> and earned my Computer Science
       degree at{" "}
-      <a href="https://yale.edu" rel="noopener noreferrer">
+      <OutboundLink href="https://yale.edu" rel="noopener noreferrer">
         Yale
-      </a>
+      </OutboundLink>
       .
     </p>
 
     <h3>Side-Project</h3>
     <p>
       I'm currently working on{" "}
-      <a href="https://retaino.com" rel="noopener noreferrer">
+      <OutboundLink href="https://retaino.com" rel="noopener noreferrer">
         Retaino
-      </a>
+      </OutboundLink>
       , a way to overcome the mindless consumption of content driven by ads and
       algorithms and, instead, focus on learning and retaining useful knowledge
       using spaced repetition.
@@ -43,62 +44,68 @@ export default ({ data }) => (
     <h3>Hobbies</h3>
     <p>
       I am an avid{" "}
-      <a href="https://instagram.com/earllifts" rel="noopener noreferrer">
+      <OutboundLink
+        href="https://instagram.com/earllifts"
+        rel="noopener noreferrer"
+      >
         weightlifter
-      </a>{" "}
+      </OutboundLink>{" "}
       and{" "}
-      <a href="https://instagram.com/earlvlee" rel="noopener noreferrer">
+      <OutboundLink
+        href="https://instagram.com/earlvlee"
+        rel="noopener noreferrer"
+      >
         photographer
-      </a>
+      </OutboundLink>
       .
     </p>
 
     <h3>Find me on</h3>
     <ul>
       <li>
-        <a
+        <OutboundLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://facebook.com/earlvlee"
         >
           Facebook
-        </a>
+        </OutboundLink>
       </li>
       <li>
-        <a
+        <OutboundLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/earllee"
         >
           Github
-        </a>
+        </OutboundLink>
       </li>
       <li>
-        <a
+        <OutboundLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://instagram.com/earlvlee"
         >
           Instagram
-        </a>
+        </OutboundLink>
       </li>
       <li>
-        <a
+        <OutboundLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://linkedin.com/in/earlvlee"
         >
           LinkedIn
-        </a>
+        </OutboundLink>
       </li>
       <li>
-        <a
+        <OutboundLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://twitter.com/earlvlee"
         >
           Twitter
-        </a>
+        </OutboundLink>
       </li>
     </ul>
   </Layout>
