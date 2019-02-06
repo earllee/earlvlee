@@ -32,7 +32,7 @@ export default ({ children }) => (
             content="Earl Lee's personal website and blog."
           />
           <title>Earl V. Lee</title>
-          <link rel="canonical" href="http://earlvlee.com/" />
+          <link rel="canonical" href="https://earlvlee.com/" />
         </Helmet>
 
         <Link to={`/`}>
@@ -46,14 +46,23 @@ export default ({ children }) => (
             {data.site.siteMetadata.title}
           </h3>
         </Link>
-        <Link
-          to={`/about/`}
+        <div
           css={css`
             float: right;
           `}
         >
-          About
-        </Link>
+          <Link
+            to={`/blog`}
+            css={css`
+              padding-right: 0.5em;
+            `}
+          >
+            Blog
+          </Link>
+          <Link to={`/`} css={css``}>
+            About
+          </Link>
+        </div>
         {children}
       </div>
     )}

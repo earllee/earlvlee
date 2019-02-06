@@ -1,77 +1,140 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import { css } from "@emotion/core";
-import { rhythm } from "../utils/typography";
+import Helmet from "react-helmet";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Layout from "../components/layout";
 
-export default ({ data }) => {
-  return (
-    <Layout>
-      <div>
-        <img src="portrero-hill.jpg" alt="Portrero Hill" />
-        {/* <img src="vietnamese-country-side.jpg" alt="Vietnamese country side" /> */}
-        {/* <img src="avalon-beach.jpg" alt="Avalon Beach" /> */}
-        {/* <img src="bamboo-trees.jpg" alt="Bamboo trees" /> */}
-        {/* <img src="half-dome.jpg" alt="Half Dome Yosemite Skyline" /> */}
-        {/* <img
-          src="la-belle-epoque.jpg"
-          alt="La Belle Epoque restaurant in Paris"
-        /> */}
-        {/* <img src="les-invalides.jpg" alt="Les Invalides in Paris" /> */}
-        {/* <img src="oculus.jpg" alt="Oculus in New York" /> */}
-        {/* <img src="paris-at-sunset.jpg" alt="Paris skyline at sunset" /> */}
-        {/* <img src="paris-skyline-during-day.jpg" alt="Paris skyline during day" /> */}
-        {/* <img src="reflection-in-mirror.jpg" alt="Reflection of Earl Lee and Sarah in the mirror" /> */}
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
-                {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #bbb;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </Layout>
-  );
-};
+export default ({ data }) => (
+  <Layout>
+    <Helmet>
+      <title>About Earl</title>
+    </Helmet>
+    <div class="cover-image">
+      <img
+        src="../reflection-in-mirror-1.jpg"
+        alt="Reflection of Earl Lee and Sarah in mirror"
+      />
+      <img
+        src="../reflection-in-mirror-2.jpg"
+        alt="Reflection of Earl Lee and Sarah in mirror"
+      />
+    </div>
+    <p>
+      Hi, my name is Earl Lee. I'm a product manager at{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://fiscalnote.com"
+        rel="noopener noreferrer"
+      >
+        FiscalNote
+      </OutboundLink>
+      , a B2B SaaS company that helps organizations ranging from Fortune 500
+      companies to nonprofits affect change in government by using data and
+      machine learning. I joined as the 3rd employee and helped us grow to 400+
+      employees.
+    </p>
+    <p>
+      Previously, I interned at{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://google.com"
+        rel="noopener noreferrer"
+      >
+        Google
+      </OutboundLink>{" "}
+      as a software engineer and got my BS in Computer Science at{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://yale.edu"
+        rel="noopener noreferrer"
+      >
+        Yale
+      </OutboundLink>
+      .
+    </p>
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+    <h3>Side-Project</h3>
+    <p>
+      I'm currently working on{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://retaino.com"
+        rel="noopener noreferrer"
+      >
+        Retaino
+      </OutboundLink>
+      , a way to overcome the mindless consumption of content driven by ads and
+      algorithms and, instead, focus on learning and retaining useful knowledge
+      using spaced repetition.
+    </p>
+
+    <h3>Hobbies</h3>
+    <p>
+      I am an avid{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://instagram.com/earllifts"
+        rel="noopener noreferrer"
+      >
+        weightlifter
+      </OutboundLink>{" "}
+      and{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://instagram.com/earlvlee"
+        rel="noopener noreferrer"
+      >
+        photographer
+      </OutboundLink>
+      .
+    </p>
+
+    <h3>Find me on</h3>
+    <ul>
+      <li>
+        <OutboundLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://facebook.com/earlvlee"
+        >
+          Facebook
+        </OutboundLink>
+      </li>
+      <li>
+        <OutboundLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/earllee"
+        >
+          Github
+        </OutboundLink>
+      </li>
+      <li>
+        <OutboundLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://instagram.com/earlvlee"
+        >
+          Instagram
+        </OutboundLink>
+      </li>
+      <li>
+        <OutboundLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://linkedin.com/in/earlvlee"
+        >
+          LinkedIn
+        </OutboundLink>
+      </li>
+      <li>
+        <OutboundLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/earlvlee"
+        >
+          Twitter
+        </OutboundLink>
+      </li>
+    </ul>
+  </Layout>
+);

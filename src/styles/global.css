@@ -1,0 +1,9 @@
+.cover-image img:last-child {
+  display: none;
+}
+.cover-image:hover img:last-child {
+  display: inline-block;
+}
+.cover-image:hover img:first-child {
+  display: none;
+}
