@@ -53,7 +53,7 @@ export default ({ data }) => (
       .
     </p>
     <p>
-      This fall, I'll be starting as a MS Engineering/MBA student at{" "}
+      This fall, I'll be starting as an MS Engineering/MBA student at{" "}
       <OutboundLink
         target="_blank"
         href="http://www.hbs.edu/ms-mba"
