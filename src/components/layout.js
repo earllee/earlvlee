@@ -52,16 +52,14 @@ export default ({ children }) => (
           `}
         >
           <Link
-            to={`/blog`}
+            to={`/`}
             css={css`
               padding-right: 0.5em;
             `}
           >
-            Blog
-          </Link>
-          <Link to={`/`} css={css``}>
             About
           </Link>
+          <Link to={`/blog`}>Blog</Link>
         </div>
         {children}
       </div>

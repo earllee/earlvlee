@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Layout from "../components/layout";
+import { SocialIcon } from "react-social-icons";
 
 export default ({ data }) => (
   <Layout>
@@ -51,6 +52,17 @@ export default ({ data }) => (
       </OutboundLink>
       .
     </p>
+    <p>
+      This fall, I'll be starting as a MS Engineering/MBA student at{" "}
+      <OutboundLink
+        target="_blank"
+        href="http://www.hbs.edu/ms-mba"
+        rel="noopener noreferrer"
+      >
+        Harvard
+      </OutboundLink>
+      .
+    </p>
 
     <h3>Side-Project</h3>
     <p>
@@ -88,53 +100,32 @@ export default ({ data }) => (
       .
     </p>
 
-    <h3>Find me on</h3>
-    <ul>
-      <li>
-        <OutboundLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://facebook.com/earlvlee"
-        >
-          Facebook
-        </OutboundLink>
-      </li>
-      <li>
-        <OutboundLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/earllee"
-        >
-          Github
-        </OutboundLink>
-      </li>
-      <li>
-        <OutboundLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://instagram.com/earlvlee"
-        >
-          Instagram
-        </OutboundLink>
-      </li>
-      <li>
-        <OutboundLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://linkedin.com/in/earlvlee"
-        >
-          LinkedIn
-        </OutboundLink>
-      </li>
-      <li>
-        <OutboundLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/earlvlee"
-        >
-          Twitter
-        </OutboundLink>
-      </li>
-    </ul>
+    <div class="social-icons-container">
+      <SocialIcon
+        url="https://twitter.com/earlvlee"
+        bgColor="#444"
+        class="social-icon"
+      />
+      <SocialIcon
+        url="https://linkedin.com/in/earlvlee"
+        bgColor="#444"
+        class="social-icon"
+      />
+      <SocialIcon
+        url="https://instagram.com/earlvlee"
+        bgColor="#444"
+        class="social-icon"
+      />
+      <SocialIcon
+        url="https://github.com/earllee"
+        bgColor="#444"
+        class="social-icon"
+      />
+      <SocialIcon
+        url="https://facebook.com/earlvlee"
+        bgColor="#444"
+        class="social-icon"
+      />
+    </div>
   </Layout>
 );

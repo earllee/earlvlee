@@ -7,3 +7,18 @@
 .cover-image:hover img:first-child {
   display: none;
 }
+
+.social-icons-container {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.social-icon {
+  height: 2em !important;
+  width: 2em !important;
+  margin: 0 0.2em;
+}
+
+.social-icon:hover {
+  filter: opacity(50%);
+}
