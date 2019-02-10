@@ -54,7 +54,7 @@ export default ({ children }) => (
           <Link
             to={`/`}
             css={css`
-              padding-right: 0.5em;
+              padding-right: 1em;
             `}
           >
             About

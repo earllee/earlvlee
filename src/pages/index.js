@@ -9,7 +9,7 @@ export default ({ data }) => (
     <Helmet>
       <title>About Earl</title>
     </Helmet>
-    <div class="cover-image">
+    <div className="cover-image">
       <img
         src="../reflection-in-mirror-1.jpg"
         alt="Reflection of Earl Lee and Sarah in mirror"
@@ -19,6 +19,11 @@ export default ({ data }) => (
         alt="Reflection of Earl Lee and Sarah in mirror"
       />
     </div>
+
+    <p className="latest-post-container">
+      Read my latest blog post <a href="/2018-reflection">here</a>!
+    </p>
+
     <p>
       Hi, my name is Earl Lee. I'm a product manager at{" "}
       <OutboundLink
@@ -100,31 +105,31 @@ export default ({ data }) => (
       .
     </p>
 
-    <div class="social-icons-container">
+    <div className="social-icons-container">
       <SocialIcon
         url="https://twitter.com/earlvlee"
         bgColor="#444"
-        class="social-icon"
+        className="social-icon"
       />
       <SocialIcon
         url="https://linkedin.com/in/earlvlee"
         bgColor="#444"
-        class="social-icon"
+        className="social-icon"
       />
       <SocialIcon
         url="https://instagram.com/earlvlee"
         bgColor="#444"
-        class="social-icon"
+        className="social-icon"
       />
       <SocialIcon
         url="https://github.com/earllee"
         bgColor="#444"
-        class="social-icon"
+        className="social-icon"
       />
       <SocialIcon
         url="https://facebook.com/earlvlee"
         bgColor="#444"
-        class="social-icon"
+        className="social-icon"
       />
     </div>
   </Layout>
