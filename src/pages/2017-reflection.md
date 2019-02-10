@@ -3,7 +3,7 @@ title: "2017 Reflection"
 date: "2018-01-27"
 ---
 
-![Earl in Japan](https://farm5.staticflickr.com/4677/39900508162_b86b845cd3_k_d.jpg)
+![Earl in Japan](/earl-lee-in-tokyo-japan.jpg)
 
 Hello, World! I always look forward to writing these annual reflection and goal-setting posts, and it will be nice to look back and hopefully be able to see progress through the years. I find these posts to be helpful in recalibrating my approach to growth and long-term goals. Furthermore, writing all of this down creates a sense of ownership for my actions and accountability for my goals. Continue reading to see how I did on my goals for 2017, lessons and observations from the past year, and what I hope to accomplish in 2018.
 
