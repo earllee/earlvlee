@@ -7,7 +7,7 @@ date: "2019-02-10"
 
 2018 was an incredible year. Certainly not the easiest but when has incredible ever been easy? This year, I went from not programming since 2015 to coding 40 hours a week on top of a full-time job, vaguely considering business school to cramming for the GRE and applying, and leading a team of 5 on the FiscalNote mobile app to a team of almost 20 across web & mobile engineering, design, and QA. I got to visit [Peru](https://www.instagram.com/p/BrOuJwvHaKY/)—my first South American trip—stopped by Beijing for business, visited Paris to see my girlfriend, and spent a weekend in [Chicago](https://www.instagram.com/p/Bm7AiDzByFf/) for the first time. I placed 3rd at a [weightlifting](https://www.instagram.com/p/BlOwha-BLb1/) competition and even learned to kayak and [snowboard](https://www.instagram.com/p/BgKXig7jAz1/).
 
-It wasn't all snowflakes and rainbows, however. There were many bittersweet moments when friends in D.C. moved on to their next great adventures—likely a factor in why I was so productive—and sad moments when family members fell ill or moved on to the ultimate destination.
+It wasn't all snowflakes and rainbows, however. There were many bittersweet moments when friends in D.C. moved on to their next great adventures—likely a factor in why I was so productive—and sad moments when friends and family fell ill or moved on to the ultimate destination.
 
 Through all of these experiences, I remember that the only constant is change but that change is ultimately a positive force. (For a good read/video on these topics, I'd recommend Steve Job's [commencement speech](https://news.stanford.edu/2005/06/14/jobs-061505/) at Stanford back in 2005.)
 
