@@ -20,12 +20,19 @@ export default ({ data }) => (
       />
     </div>
 
-    <p className="latest-post-container">
-      Read my latest blog post <a href="/2018-reflection">here</a>!
-    </p>
-
     <p>
-      Hi, my name is Earl Lee. I'm a product manager at{" "}
+      Hi, my name is Earl Lee. I'm an incoming MS/MBA student at{" "}
+      <OutboundLink
+        target="_blank"
+        href="http://www.hbs.edu/ms-mba"
+        rel="noopener noreferrer"
+      >
+        Harvard
+      </OutboundLink>
+      .
+    </p>
+    <p>
+      Most recently, I helped start{" "}
       <OutboundLink
         target="_blank"
         href="https://fiscalnote.com"
@@ -36,7 +43,10 @@ export default ({ data }) => (
       , a B2B SaaS company that helps organizations ranging from Fortune 500
       companies to nonprofits affect change in government by using data and
       machine learning. I joined as the 3rd employee and helped us grow to 400+
-      employees.
+      employees, serving as a software engineer for the first two years and
+      product manager during the last three. By the end, I was leading a
+      cross-functional R&D team of 15+ people working across web, iOS, and
+      Android apps.
     </p>
     <p>
       Previously, I interned at{" "}
@@ -54,17 +64,6 @@ export default ({ data }) => (
         rel="noopener noreferrer"
       >
         Yale
-      </OutboundLink>
-      .
-    </p>
-    <p>
-      This fall, I'll be starting as an MS Engineering/MBA student at{" "}
-      <OutboundLink
-        target="_blank"
-        href="http://www.hbs.edu/ms-mba"
-        rel="noopener noreferrer"
-      >
-        Harvard
       </OutboundLink>
       .
     </p>
