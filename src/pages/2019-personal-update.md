@@ -9,4 +9,4 @@ After nearly six years, I left [FiscalNote](https://fiscalnote.com) last month. 
 
 The past several weeks, I got to travel and work on an early-stage project for [Benchmark](http://www.benchmark.com). Now, I'm excited to join [Costanoa Ventures](https://www.costanoavc.com) in the San Francisco Bay Area for an internship before starting the next chapter of my life as an MS/MBA candidate at the [Harvard Business School](https://www.hbs.edu) and the [School of Engineering and Applied Sciences](https://www.seas.harvard.edu).
 
-![Earl Lee at Harvard Business School with Academy Award](/earl-hbs-oscar.jpg)
+![Earl Lee at Harvard Business School with Academy Award](/earl-hbs-academy-award.jpg)
