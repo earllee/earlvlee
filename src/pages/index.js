@@ -19,7 +19,11 @@ export default ({ data }) => (
         alt="Reflection of Earl Lee and Sarah in mirror"
       />
     </div>
-
+    {Date.now() < Date.parse("18 May 2019") ? (
+      <p className="latest-post-container">
+        Read my latest personal update <a href="/2019-personal-update">here</a>!
+      </p>
+    ) : null}
     <p>
       Hi, my name is Earl Lee. I'm an incoming MS/MBA student at{" "}
       <OutboundLink

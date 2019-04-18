@@ -1,6 +1,6 @@
 ---
 title: "From DC to SF to Boston"
-date: "2019-02-18"
+date: "2019-04-18"
 ---
 
 ![Earl Lee last day at FiscalNote](/earl-last-day-at-fiscalnote.jpg)
