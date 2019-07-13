@@ -9,17 +9,7 @@ export default ({ data }) => (
     <Helmet>
       <title>About Earl</title>
     </Helmet>
-    <div className="cover-image">
-      <img
-        src="../reflection-in-mirror-1.jpg"
-        alt="Reflection of Earl Lee and Sarah in mirror"
-      />
-      <img
-        src="../reflection-in-mirror-2.jpg"
-        alt="Reflection of Earl Lee and Sarah in mirror"
-      />
-    </div>
-
+    <img src="../earl-in-rome.jpg" alt="Earl in Rome" />
     <p>
       Hi, my name is Earl Lee. I'm an intern at{" "}
       <OutboundLink
