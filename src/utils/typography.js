@@ -3,7 +3,11 @@ import kirkhamTheme from "typography-theme-kirkham";
 
 kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
   body: {
-    fontSize: "0.85em"
+    fontSize: "0.85em",
+    fontFamily: "'Helvetica Neue',sans-serif"
+  },
+  "h1,h2,h3,h4,h5,h6": {
+    fontFamily: "'Times New Roman', serif"
   },
   a: {
     textDecoration: "none",
