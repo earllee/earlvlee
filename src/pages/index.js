@@ -11,26 +11,34 @@ export default ({ data }) => (
     </Helmet>
     <img src="../earl-in-rome.jpg" alt="Earl in Rome" />
     <p>
-      Hi, my name is Earl Lee. I'm an intern at{" "}
+      Hi, my name is Earl Lee. I'm an MS/MBA student at{" "}
+      <OutboundLink
+        target="_blank"
+        href="http://www.hbs.edu/ms-mba"
+        rel="noopener noreferrer"
+      >
+        Harvard Business School
+      </OutboundLink>{" "}
+      and the{" "}
+      <OutboundLink
+        target="_blank"
+        href="https://www.seas.harvard.edu/"
+        rel="noopener noreferrer"
+      >
+        School of Engineering and Applied Sciences
+      </OutboundLink>
+      . Part-time, I work with{" "}
       <OutboundLink
         target="_blank"
         href="http://www.costanoavc.com"
         rel="noopener noreferrer"
       >
         Costanoa Ventures
-      </OutboundLink>{" "}
-      and an incoming MS/MBA student at{" "}
-      <OutboundLink
-        target="_blank"
-        href="http://www.hbs.edu/ms-mba"
-        rel="noopener noreferrer"
-      >
-        Harvard
       </OutboundLink>
-      .
+      , where I was an early-stage B2B investment fellow before starting at HBS.
     </p>
     <p>
-      Most recently, I helped start{" "}
+      Previously, I helped start{" "}
       <OutboundLink
         target="_blank"
         href="https://fiscalnote.com"
@@ -42,12 +50,12 @@ export default ({ data }) => (
       companies to nonprofits affect change in government by using data and
       machine learning. I joined as the 3rd employee and helped us grow to 400+
       employees, serving as a software engineer for the first two years and
-      product manager during the last three. By the end, I was leading a
+      product manager during the last three. By the end, I led a
       cross-functional R&D team of 15+ people working across web, iOS, and
       Android apps.
     </p>
     <p>
-      Previously, I interned at{" "}
+      During undergrad, I interned at{" "}
       <OutboundLink
         target="_blank"
         href="https://google.com"
@@ -80,8 +88,13 @@ export default ({ data }) => (
       algorithms and, instead, focus on learning and retaining useful knowledge
       using spaced repetition.
     </p>
+    <p>
+      Separately, I'm also exploring the changing landscape for health & fitness
+      products, such as the adoption of at-home connected devices including
+      Peloton and Tonal.
+    </p>
 
-    <h3>Hobbies</h3>
+    <h3>Interests</h3>
     <p>
       I am an avid{" "}
       <OutboundLink
