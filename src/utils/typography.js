@@ -7,9 +7,9 @@ kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
   },
   a: {
     textDecoration: "none",
-    // color: "#386dc0" // Blue
+    color: "#386dc0" // Blue
     // color: "#a41034" // Red
-    color: "#9f392b" // Original
+    // color: "#9f392b" // Original
   }
 });
 
