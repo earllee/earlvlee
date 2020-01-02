@@ -11,7 +11,7 @@ export default ({ data }) => (
     </Helmet>
     <img src="../earl-in-rome.jpg" alt="Earl in Rome" />
     <p className="latest-post-container">
-      Read my latest blog post <a href="/2020">here</a>!
+      Read my latest blog post <a href="/2019-reflection">here</a>!
     </p>
     <p>
       Hi, my name is Earl Lee. I'm an MS/MBA student at{" "}
