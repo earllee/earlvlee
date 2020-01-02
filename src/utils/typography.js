@@ -7,7 +7,7 @@ kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
     fontFamily: "'Helvetica Neue',sans-serif"
   },
   "h1,h2,h3,h4,h5,h6": {
-    fontFamily: "'Times New Roman', serif"
+    fontFamily: "'Ibarra Real Nova', serif"
   },
   a: {
     textDecoration: "none",
@@ -16,6 +16,13 @@ kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
     // color: "#9f392b" // Original
   }
 });
+
+kirkhamTheme.googleFonts = [
+  {
+    name: "Ibarra Real Nova",
+    styles: [""]
+  }
+];
 
 const typography = new Typography(kirkhamTheme);
 
