@@ -3,8 +3,7 @@ import kirkhamTheme from "typography-theme-kirkham";
 
 kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
   body: {
-    fontSize: "0.85em",
-    fontFamily: "'Helvetica Neue',sans-serif"
+    fontFamily: "'EB Garamond',serif"
   },
   "h1,h2,h3,h4,h5,h6": {
     fontFamily: "'Ibarra Real Nova', serif"
@@ -21,6 +20,10 @@ kirkhamTheme.googleFonts = [
   {
     name: "Ibarra Real Nova",
     styles: [""]
+  },
+  {
+    name: "EB Garamond",
+    styles: []
   }
 ];
 
