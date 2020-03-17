@@ -29,10 +29,16 @@ As I reflect on this year, I can't help but describe it as moving on from one pa
 
 Instead of rigidly setting goals once at the beginning of the year, I plan to add to this list—but not remove.
 
-- **Eat a more plant-based diet.** Count the number of days where you eat meat. Keep it low.
-- **Build a spaced repetition habit** and write down what you learn.
+- **Start a company.**
+- **Limit social media usage to < 1 hour day.**
+  - Twitter and LinkedIn are exempt because they can be productive.
+- **Eat a more plant-based diet.**
+  - Count the number of days where you eat meat. Keep it low.
+- **Build a spaced repetition habit.**
+  - Write down what you learn.
   - Even something like [this tweet summary](https://twitter.com/earlvlee/status/1146612139718664195) of an article would be a good practice and good for building a Twitter following.
-- **Track macronutrients**, bodyweight, and body fat percentage for at least 340 days or 93% of the year.
+- **Track macronutrients, bodyweight, and body fat percentage.**
+  - For at least 340 days or 93% of the year.
   - Fix knee caving problem when squatting.
   - Reach 10% body fat and don't go above 15%.
   - Total 205 kg in weightlifting.
@@ -41,6 +47,7 @@ Instead of rigidly setting goals once at the beginning of the year, I plan to ad
 - **Spend more time with people**.
   - Grab 1:1 time with people more frequently.
   - Engage in group conversations more.
+- **Pick up snowboarding or skiing.**
 
 ## Interesting Reads
 
