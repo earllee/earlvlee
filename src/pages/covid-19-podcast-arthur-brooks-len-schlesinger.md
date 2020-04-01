@@ -1,5 +1,5 @@
 ---
-title: "Analyzing Your Emotions During COVID-19"
+title: "Arthur Brooks on COVID-19"
 date: "2020-04-01"
 ---
 
