@@ -9,7 +9,10 @@ export default ({ data }) => (
     <Helmet>
       <title>About Earl</title>
     </Helmet>
-    <img src="../earl-in-rome.jpg" alt="Earl in Rome" />
+    <img
+      src="../reflection-in-mirror.jpg"
+      alt="Reflection in mirror of Earl Lee"
+    />
     <p className="latest-post-container">
       Read my latest blog post{" "}
       <a href="/covid-19-podcast-arthur-brooks-len-schlesinger">here</a>!
@@ -79,8 +82,9 @@ export default ({ data }) => (
     </p>
 
     <h3>Side-Project</h3>
+    <p>Currently working on exploring ideas in the fitness space.</p>
     <p>
-      I'm currently working on{" "}
+      My latest side project is{" "}
       <OutboundLink
         target="_blank"
         href="https://retaino.com"
@@ -91,11 +95,6 @@ export default ({ data }) => (
       , a way to overcome the mindless consumption of content driven by ads and
       algorithms and, instead, focus on learning and retaining useful knowledge
       using spaced repetition.
-    </p>
-    <p>
-      Separately, I'm also exploring the changing landscape for health & fitness
-      products, such as the adoption of at-home connected devices including
-      Peloton and Tonal.
     </p>
 
     <h3>Interests</h3>

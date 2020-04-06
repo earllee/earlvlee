@@ -4,28 +4,28 @@ import kirkhamTheme from "typography-theme-kirkham";
 kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
   body: {
     fontFamily: "'Helvetica Neue',serif",
-    fontSize: "0.8em"
+    fontSize: "0.8em",
   },
   "h1,h2,h3,h4,h5,h6": {
-    fontFamily: "'Ibarra Real Nova', serif"
+    fontFamily: "'Ibarra Real Nova', serif",
   },
   a: {
     textDecoration: "none",
-    color: "#386dc0" // Blue
-    // color: "#a41034" // Red
-    // color: "#9f392b" // Original
-  }
+    // color: "#386dc0" // Blue
+    // color: "#a41034", // Red
+    color: "#9f392b", // Original
+  },
 });
 
 kirkhamTheme.googleFonts = [
   {
     name: "Ibarra Real Nova",
-    styles: [""]
+    styles: [""],
   },
   {
     name: "EB Garamond",
-    styles: []
-  }
+    styles: [],
+  },
 ];
 
 const typography = new Typography(kirkhamTheme);
