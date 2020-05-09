@@ -39,7 +39,7 @@ export default ({ data }) => (
       >
         Costanoa Ventures
       </OutboundLink>
-      , a Seed & Series A investment firm.
+      , a Seed & Series A venture capital firm focused on enterprise software.
     </p>
     <p>
       Previously, I helped start{" "}
@@ -79,7 +79,7 @@ export default ({ data }) => (
     </p>
 
     <h3>Currently</h3>
-    <p>I'm building something new and reading a lot of books. On the side, I
+    <p>I'm building something new and reading books. On the side, I
       work on{' '}
       <OutboundLink
         target="_blank"
