@@ -10,7 +10,7 @@ export default ({ data }) => (
       <title>About Earl</title>
     </Helmet>
     <img
-      src="../reflection-in-mirror.jpg"
+      src="/reflection-in-mirror.jpg"
       alt="Reflection in mirror of Earl Lee"
     />
     <h3>Hi, my name is Earl</h3>

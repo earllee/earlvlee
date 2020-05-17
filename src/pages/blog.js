@@ -12,7 +12,7 @@ export default ({ data }) => {
         <title>Earl's Blog</title>
       </Helmet>
       <div>
-        <img src="portrero-hill.jpg" alt="Portrero Hill" />
+        <img src="/portrero-hill.jpg" alt="Portrero Hill" />
         {/* <img src="vietnamese-country-side.jpg" alt="Vietnamese country side" /> */}
         {/* <img src="avalon-beach.jpg" alt="Avalon Beach" /> */}
         {/* <img src="bamboo-trees.jpg" alt="Bamboo trees" /> */}

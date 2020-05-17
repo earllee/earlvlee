@@ -16,7 +16,7 @@ export default ({ data }) => {
         {/* <img src="bamboo-trees.jpg" alt="Bamboo trees" /> */}
         {/* <img src="half-dome.jpg" alt="Half Dome Yosemite Skyline" /> */}
         <img
-          src="la-belle-epoque.jpg"
+          src="/la-belle-epoque.jpg"
           alt="La Belle Epoque restaurant in Paris"
         />
         {/* <img src="les-invalides.jpg" alt="Les Invalides in Paris" /> */}
