@@ -113,8 +113,7 @@ export default ({ data }) => (
       </OutboundLink>
       . One of my favorite weekend activies is to post up at a coffee shop and
       read or write code. In the absence of a coffee shop, I like to make my
-      own pourovers. Some of the online writers I like include Ben Thompson,
-      Byrne Hobart, Matt Levine, Alex Danco, Nathan Baschez, and Eugene Wei.
+      own pourovers.
     </p>
 
     <div className="social-icons-container">

@@ -115,17 +115,17 @@ export default ({ data }) => {
               <li>
                 <OutboundLink href="https://ig.ft.com/sites/business-book-award/">
                   Financial Times
-              </OutboundLink> - Best Business Books
+              </OutboundLink> - Best business books by year
             </li>
               <li>
                 <OutboundLink href="https://medium.com/the-mission/39-book-recommendations-from-billionaire-charlie-munger-that-will-make-you-smarter-72efcbeaec77">
                   Charlie Munger
-              </OutboundLink> - Book Recommendations
+              </OutboundLink> - Recommendations for getting smarter
             </li>
               <li>
                 <OutboundLink href="http://investorfieldguide.com/the-best-per-page-books/">
                   Patrick O'Shaughnessy
-              </OutboundLink> - Best Per-Page Books
+              </OutboundLink> - Best per-page books
             </li>
               <li>
                 <OutboundLink href="https://medium.com/@gavin_baker/investing-book-list-5fba1b80728d">
