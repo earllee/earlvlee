@@ -59,7 +59,13 @@ export default ({ children }) => (
           >
             About
           </Link>
-          <Link to={`/blog`}>Blog</Link>
+          <Link to={`/blog`}
+            css={css`
+              padding-right: 1em;
+            `}
+          >
+            Blog</Link>
+          <Link to={`/lists`}>Lists</Link>
         </div>
         {children}
       </div>
