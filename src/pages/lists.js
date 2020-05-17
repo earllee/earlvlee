@@ -90,6 +90,11 @@ export default ({ data }) => {
             </OutboundLink> - Story of insane grit and shooting for the moon (literally)
           </li>
           <li>
+            <OutboundLink href="https://www.goodreads.com/book/show/16144575-how-asia-works">
+              How Asia Works by Joe Studwell
+            </OutboundLink> - Development economics of East Asian countries
+          </li>
+          <li>
             <OutboundLink href="https://www.goodreads.com/book/show/13530973-antifragile">
               Antifragile by Nassim Nicholas Taleb
             </OutboundLink> - Thinking about systems
