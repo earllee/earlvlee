@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import { css } from "@emotion/core";
 import { rhythm } from "../utils/typography";
@@ -7,6 +8,9 @@ import Layout from "../components/layout";
 export default ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>Earl's Blog</title>
+      </Helmet>
       <div>
         <img src="portrero-hill.jpg" alt="Portrero Hill" />
         {/* <img src="vietnamese-country-side.jpg" alt="Vietnamese country side" /> */}
