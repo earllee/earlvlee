@@ -10,20 +10,10 @@ export default ({ data }) => {
         <title>Earl's Lists</title>
       </Helmet>
       <div>
-        {/* <img src="portrero-hill.jpg" alt="Portrero Hill" /> */}
-        {/* <img src="vietnamese-country-side.jpg" alt="Vietnamese country side" /> */}
-        {/* <img src="avalon-beach.jpg" alt="Avalon Beach" /> */}
-        {/* <img src="bamboo-trees.jpg" alt="Bamboo trees" /> */}
-        {/* <img src="half-dome.jpg" alt="Half Dome Yosemite Skyline" /> */}
         <img
           src="/la-belle-epoque.jpg"
           alt="La Belle Epoque restaurant in Paris"
         />
-        {/* <img src="les-invalides.jpg" alt="Les Invalides in Paris" /> */}
-        {/* <img src="oculus.jpg" alt="Oculus in New York" /> */}
-        {/* <img src="paris-at-sunset.jpg" alt="Paris skyline at sunset" /> */}
-        {/* <img src="paris-skyline-during-day.jpg" alt="Paris skyline during day" /> */}
-        {/* <img src="reflection-in-mirror.jpg" alt="Reflection of Earl Lee and Sarah in the mirror" /> */}
         <p><em>Lists of things I think are interesting and worth sharing.</em></p>
         <h3>Newsletters</h3>
         <p>I think editorialized newsletters are a great way to learn. They
@@ -31,19 +21,39 @@ export default ({ data }) => {
           information. These are some of the ones I regularly read.</p>
         <ul>
           <li>
-            <OutboundLink href="https://stratechery.com">
-              Stratechery by Ben Thompson
-            </OutboundLink> - Tech strategy
-          </li>
-          <li>
             <OutboundLink href="https://diff.substack.com">
               The Diff by Byrne Hobart
             </OutboundLink> - Strategy and finance
           </li>
           <li>
+            <OutboundLink href="https://stratechery.com">
+              Stratechery by Ben Thompson
+            </OutboundLink> - Tech strategy
+          </li>
+          <li>
+            <OutboundLink href="https://alexdanco.com">
+              Alex Danco
+            </OutboundLink> - Tech and finance
+          </li>
+          <li>
             <OutboundLink href="https://venturedesktop.substack.com">
               Venture Desktop by Brett Bivens
             </OutboundLink> - Tech
+          </li>
+          <li>
+            <OutboundLink href="http://eugenewei.substack.com">
+              Remains of the Day by Eugene Wei
+            </OutboundLink> - Tech, business, product, and culture
+          </li>
+          <li>
+            <OutboundLink href="https://divinations.substack.com">
+              Divinations by Nathan Baschez
+            </OutboundLink> - Strategy
+          </li>
+          <li>
+            <OutboundLink href="https://julian.digital">
+              Julian Lehr
+            </OutboundLink> - Product, tech strategy, and design
           </li>
           <li>
             <OutboundLink href="http://firehose.substack.com">
@@ -54,21 +64,6 @@ export default ({ data }) => {
             <OutboundLink href="http://link.mail.bloombergbusiness.com/join/4wm/moneystuff-signup">
               Money Stuff by Matt Levine
             </OutboundLink> - Finance
-          </li>
-          <li>
-            <OutboundLink href="http://eugenewei.substack.com">
-              Remains of the Day by Eugene Wei
-            </OutboundLink> - Tech, business, product, and culture
-          </li>
-          <li>
-            <OutboundLink href="https://alexdanco.com">
-              Alex Danco
-            </OutboundLink> - Tech and finance
-          </li>
-          <li>
-            <OutboundLink href="https://divinations.substack.com">
-              Divinations by Nathan Baschez
-            </OutboundLink> - Strategy
           </li>
           <li>
             <OutboundLink href="https://www.ben-evans.com/newsletter">
@@ -85,11 +80,6 @@ export default ({ data }) => {
             </OutboundLink> - Incredible entrepreneurship story
           </li>
           <li>
-            <OutboundLink href="https://www.goodreads.com/book/show/22535480-elon-musk">
-              Elon Musk by Ashlee Vance
-            </OutboundLink> - Story of insane grit and shooting for the moon (literally)
-          </li>
-          <li>
             <OutboundLink href="https://www.goodreads.com/book/show/16144575-how-asia-works">
               How Asia Works by Joe Studwell
             </OutboundLink> - Development economics of East Asian countries
@@ -103,6 +93,11 @@ export default ({ data }) => {
             <OutboundLink href="https://www.goodreads.com/book/show/13586932-the-outsiders">
               The Outsiders by William Thorndike
             </OutboundLink> - Capitalist's perspective on great CEO's
+          </li>
+          <li>
+            <OutboundLink href="https://www.goodreads.com/book/show/22535480-elon-musk">
+              Elon Musk by Ashlee Vance
+            </OutboundLink> - Story of insane grit and shooting for the moon (literally)
           </li>
           <li>
             Other book recommendation lists
