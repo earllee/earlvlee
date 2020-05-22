@@ -29,7 +29,7 @@ export default ({ children }) => (
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Earl Lee's personal website and blog."
+            content="Earl Lee is an MS/MBA student at Harvard University. Previously, he was 3rd hire at FiscalNote, a Series D startup, and an investment fellow at Costanoa Ventures. This is his blog and personal website."
           />
           <title>Earl V. Lee</title>
           <link rel="canonical" href="https://earlvlee.com/" />
