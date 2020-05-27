@@ -32,6 +32,7 @@ Instead of rigidly setting goals once at the beginning of the year, I plan to ad
 - **Start a company.**
 - **Limit social media usage to < 1 hour day.**
   - Twitter and LinkedIn are exempt because they can be productive.
+- ██ ██ ██ █████.
 - **Eat a more plant-based diet.**
   - Count the number of days where you eat meat. Keep it low.
 - **Build a spaced repetition habit.**
