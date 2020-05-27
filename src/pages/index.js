@@ -79,8 +79,13 @@ export default ({ data }) => (
     </p>
 
     <h3>Currently</h3>
-    <p>I'm building something new and reading books. On the side, I
-      work on{' '}
+    <p>Building something new, reading books, sharpening design skills, and learning iOS development. Some recent hacks I've worked on:</p>
+    <ul>
+      <li><strong>Fitness aggregator:</strong> Scrapes data from various sources including MyFitnessPal and Withings to provide a holistic view on my health. It aggregates all the health metrics I track including sleep, nutrition, and calories burned.</li>
+      <li><strong>In-stock monitor:</strong> Monitors a website every minute and texts me when something comes back in stock. I built this because I'm building a home gym and need to monitor niche e-commerce websites but didn't want to pay for high frequency monitoring and also wanted the immediacy of a text notification as opposed to email. On test runs, I was able to go from text receipt to purchase in {'<15'} seconds!</li>
+    </ul>
+    <p>
+      I also maintain {' '}
       <OutboundLink
         target="_blank"
         href="https://retaino.com"
