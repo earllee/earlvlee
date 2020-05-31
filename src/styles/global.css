@@ -27,3 +27,7 @@
 .social-icon:hover {
   filter: opacity(50%);
 }
+
+.bold {
+  font-weight: bold;
+}
