@@ -31,7 +31,7 @@ export default ({ children }) => (
             name="description"
             content="Earl Lee is an MS/MBA at Harvard. He was the 3rd hire at FiscalNote (Series D) and an investor fellow at Costanoa Ventures. This is his blog / personal website."
           />
-          <title>Earl V. Lee</title>
+          <title>Earl Lee</title>
           <link rel="canonical" href="https://earlvlee.com/" />
         </Helmet>
 

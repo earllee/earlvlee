@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Earl's Blog</title>
+        <title>Earl Lee's Blog</title>
       </Helmet>
       <div>
         <img src="/portrero-hill.jpg" alt="Portrero Hill" />

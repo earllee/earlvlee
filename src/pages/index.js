@@ -7,13 +7,13 @@ import { SocialIcon } from "react-social-icons";
 export default ({ data }) => (
   <Layout>
     <Helmet>
-      <title>About Earl</title>
+      <title>About Earl Lee</title>
     </Helmet>
     <img
       src="/reflection-in-mirror.jpg"
       alt="Reflection in mirror of Earl Lee"
     />
-    <h3>Hi, my name is Earl</h3>
+    <h3>Hi, my name is Earl Lee</h3>
     <p>
       I'm an MS/MBA student at{" "}
       <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">

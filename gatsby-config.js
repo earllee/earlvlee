@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Earl V. Lee`,
-    altTitle: `EarlL.ee`
+    title: `Earl Lee`,
+    altTitle: `EarlLee`
   },
   plugins: [
     // Plugins
