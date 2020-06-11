@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Layout from "../components/layout";
 import { SocialIcon } from "react-social-icons";
+import { Link } from "gatsby";
 
 export default ({ data }) => (
   <Layout>
@@ -13,6 +14,9 @@ export default ({ data }) => (
       src="/reflection-in-mirror.jpg"
       alt="Reflection in mirror of Earl Lee"
     />
+    <p className="latest-post-container">
+      Read my <Link to="/blog/2020-06-11-newsletter">latest blog post</Link> about DoorDash, Substack, podcasting, and more!
+    </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
       I'm an MS/MBA student at{" "}
