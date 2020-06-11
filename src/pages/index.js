@@ -55,7 +55,7 @@ export default ({ data }) => (
     </p>
 
     <h3>Currently</h3>
-    <p>Building something new, reading books, sharpening design skills, and learning iOS development. Some recent hacks I've worked on:</p>
+    <p>Building something new, reading books, sharpening design skills, and coding more. Some recent hacks I've worked on:</p>
     <ul>
       <li><strong>Fitness aggregator:</strong> Scrapes data from various sources including MyFitnessPal and Withings to provide a holistic view on my health. It aggregates all the health metrics I track including sleep, nutrition, heart rate variability, resting heart rate, calories burned, and more. Feel free to reach out to me if you're interested in using this code.</li>
       <li><OutboundLink href="https://github.com/earllee/website-monitor" className="bold">Website monitor:</OutboundLink> Monitors a website every minute and text messages the user when something comes back in stock. I built this because I'm building a home gym and need to monitor niche e-commerce websites but didn't want to pay for high frequency monitoring and also wanted the immediacy of a text notification as opposed to email. On test runs, I was able to go from receipt of SMS to purchase in {'<15'} seconds!</li>
