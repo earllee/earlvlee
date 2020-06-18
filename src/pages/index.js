@@ -34,17 +34,17 @@ export default ({ data }) => (
       , a Seed & Series A venture capital firm focused on enterprise software.
     </p>
     <p>
-      Previously, I helped start{" "}
+      Previously, I helped build{" "}
       <OutboundLink href="https://fiscalnote.com" className="bold">
         FiscalNote
       </OutboundLink>
       , a B2B SaaS company that helps organizations ranging from Fortune 500
-      companies to nonprofits deal with change in government policy by using data
-      and machine learning. I joined as the 3rd employee and helped us grow to
-      400+ employees, serving as a software engineer for the first two years and
-      product manager during the last three. By the end, I led a
-      cross-functional R&D team of 15+ people working across web, iOS, and
-      Android apps.
+      companies to nonprofits manage regulatory changes using
+      data and machine learning. I joined pre-seed as the 3rd employee and
+      helped us grow to Series D and 400+ employees, serving as a software
+      engineer for my first two years and product manager during the last three. I wrote code for our MVP, helped build out our product team,
+      established our internal analytics function, and by the end, led a
+      cross-functional R&D team of 15+ people shipping products across web, iOS, and Android.
     </p>
     <p>
       During undergrad, I interned at{" "}
