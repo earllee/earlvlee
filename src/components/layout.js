@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { css } from "@emotion/core";
 import { StaticQuery, Link, graphql } from "gatsby";
 
@@ -59,6 +60,12 @@ export default ({ children }) => (
           >
             About
           </Link>
+          <OutboundLink href="http://personops.com"
+            css={css`
+              padding-right: 1em;
+            `}
+          >
+            Newsletter</OutboundLink>
           <Link to={`/blog`}
             css={css`
               padding-right: 1em;

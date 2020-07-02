@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Layout from "../components/layout";
 import { SocialIcon } from "react-social-icons";
-import { Link } from "gatsby";
 
 export default ({ data }) => (
   <Layout>
