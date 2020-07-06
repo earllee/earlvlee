@@ -14,7 +14,7 @@ export default ({ data }) => (
       alt="Reflection in mirror of Earl Lee"
     />
     <p className="latest-post-container">
-      I started a newsletter called <OutboundLink href="http://personops.com">PersonOps</OutboundLink>!
+      Follow my fitness, mindfulness & productivity newsletter at <OutboundLink href="http://personops.com">PersonOps.com</OutboundLink>!
     </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
