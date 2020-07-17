@@ -18,22 +18,18 @@ export default ({ data }) => (
     </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
-      I'm an MS/MBA student at{" "}
+      I'm currently working on a new startup. Previously, I completed a year as an MS/MBA at{" "}
       <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">
         Harvard Business School
-      </OutboundLink>{" "}
-      and the{" "}
-      <OutboundLink href="https://www.seas.harvard.edu/" className="bold">
-        School of Engineering and Applied Sciences
       </OutboundLink>
-      . Before school, I was an investment fellow at{' '}
+      . I also invested briefly at{" "}
       <OutboundLink href="http://www.costanoavc.com" className="bold">
         Costanoa Ventures
       </OutboundLink>
-      , a Seed & Series A venture capital firm focused on enterprise software.
-    </p>
+      , a Seed & Series A venture capital firm focused on enterprise software.</p>
+
     <p>
-      Previously, I helped build{" "}
+      I spent 6 years helping build{" "}
       <OutboundLink href="https://fiscalnote.com" className="bold">
         FiscalNote
       </OutboundLink>
@@ -58,7 +54,7 @@ export default ({ data }) => (
     </p>
 
     <h3>Currently</h3>
-    <p>Building something new, reading books, sharpening design skills, and coding more. Some recent hacks I've worked on:</p>
+    <p>Building something new, reading books, sharpening design skills, and coding. Some recent hacks I've worked on:</p>
     <ul>
       <li><strong>Fitness aggregator:</strong> Scrapes data from various sources including MyFitnessPal and Withings to provide a holistic view on my health. It aggregates all the health metrics I track including sleep, nutrition, heart rate variability, resting heart rate, calories burned, and more. Feel free to reach out to me if you're interested in using this code.</li>
       <li><OutboundLink href="https://github.com/earllee/website-monitor" className="bold">Website monitor:</OutboundLink> Monitors a website every minute and text messages the user when something comes back in stock. I built this because I'm building a home gym and need to monitor niche e-commerce websites but didn't want to pay for high frequency monitoring and also wanted the immediacy of a text notification as opposed to email. On test runs, I was able to go from receipt of SMS to purchase in {'<15'} seconds!</li>
