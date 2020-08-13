@@ -13,16 +13,13 @@ export default ({ data }) => (
       src="/reflection-in-mirror.jpg"
       alt="Reflection in mirror of Earl Lee"
     />
-    <p className="latest-post-container">
-      Follow my fitness, mindfulness & productivity newsletter at <OutboundLink href="http://personops.com">PersonOps.com</OutboundLink>!
-    </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
-      I'm currently working on a new startup. Previously, I completed a year as an MS/MBA at{" "}
+      I'm currently working on a new startup. Recently, I was an MS/MBA candidate at{" "}
       <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">
         Harvard Business School
       </OutboundLink>{" "}
-      and invested at{" "}
+      but left after completing my first year to found a company. I also invested at{" "}
       <OutboundLink href="http://www.costanoavc.com" className="bold">
         Costanoa Ventures
       </OutboundLink>
