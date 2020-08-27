@@ -10,8 +10,8 @@ export default ({ data }) => (
       <title>About Earl Lee</title>
     </Helmet>
     <img
-      src="/reflection-in-mirror.jpg"
-      alt="Reflection in mirror of Earl Lee"
+      src="/earl-at-matthews-arm.jpg"
+      alt="Earl at Matthew's Arm"
     />
     <h3>Hi, my name is Earl Lee</h3>
     <p>
