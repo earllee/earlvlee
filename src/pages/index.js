@@ -31,12 +31,12 @@ export default ({ data }) => (
       <OutboundLink href="https://fiscalnote.com" className="bold">
         FiscalNote
       </OutboundLink>
-      , a B2B SaaS company that helps organizations ranging from Fortune 500
-      companies to nonprofits manage regulatory changes using
-      data and machine learning. I joined pre-seed as the 3rd employee and
-      helped us grow to Series D and 400+ employees, serving as a software
-      engineer for my first two years and product manager during the last three. I wrote code for our MVP, helped build out our product team,
-      established our internal analytics function, and by the end, led a
+      , a B2B SaaS company that helps organizations ranging from F500
+      to nonprofits manage policy issues using data and machine learning.
+      I joined pre-seed as the 3rd employee and helped us grow to Series D
+      and 400+ employees, serving as a software engineer for 2 years and a product manager for 4 years.
+      I wrote code for our MVP, owned design and implementation of several core features, helped build out our product team,
+      established our internal analytics function, and, by the end, led a
       cross-functional R&D team of 15+ people shipping products across web, iOS, and Android.
     </p>
     <p>
