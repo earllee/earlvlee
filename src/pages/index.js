@@ -13,13 +13,16 @@ export default ({ data }) => (
       src="/earl-at-matthews-arm.jpg"
       alt="Earl at Matthew's Arm"
     />
+    <p className="latest-post-container">
+      I'm taking on projects to help growing SaaS companies <strong>build a robust analytics function</strong>. <a href="https://www.linkedin.com/in/earlvlee/">Reach out</a> if you need help with data warehouses, ETL, and BI tools!
+    </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
-      I'm currently working on a new startup. Recently, I was an MS/MBA candidate at{" "}
+      I'm currently exploring. Recently, I was an MS/MBA candidate at{" "}
       <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">
         Harvard Business School
       </OutboundLink>{" "}
-      but left after completing my first year to found a company. I also invested at{" "}
+      and investor at{" "}
       <OutboundLink href="http://www.costanoavc.com" className="bold">
         Costanoa Ventures
       </OutboundLink>
