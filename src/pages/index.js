@@ -13,16 +13,13 @@ export default ({ data }) => (
       src="/earl-at-matthews-arm.jpg"
       alt="Earl at Matthew's Arm"
     />
-    <p className="latest-post-container">
-      I'm taking on projects to help growing SaaS companies <strong>build a robust analytics function</strong>. <a href="https://www.linkedin.com/in/earlvlee/">Reach out</a> if you need help with data warehouses, ETL, and BI tools!
-    </p>
     <h3>Hi, my name is Earl Lee</h3>
     <p>
-      I'm currently exploring. Recently, I was an MS/MBA candidate at{" "}
+      Recently, I was an MS/MBA candidate at{" "}
       <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">
         Harvard Business School
       </OutboundLink>{" "}
-      and investor at{" "}
+      and an investor at{" "}
       <OutboundLink href="http://www.costanoavc.com" className="bold">
         Costanoa Ventures
       </OutboundLink>
@@ -30,17 +27,14 @@ export default ({ data }) => (
     </p>
 
     <p>
-      I spent 6 years helping build{" "}
+      I spent 6 years helping build B2B SaaS company{" "}
       <OutboundLink href="https://fiscalnote.com" className="bold">
         FiscalNote
       </OutboundLink>
-      , a B2B SaaS company that helps organizations ranging from F500
-      to nonprofits manage policy issues using data and machine learning.
-      I joined pre-seed as the 3rd employee and helped us grow to Series D
-      and 400+ employees, serving as a software engineer for 2 years and a product manager for 4 years.
-      I wrote code for our MVP, owned design and implementation of several core features, helped build out our product team,
-      established our internal analytics function, and, by the end, led a
-      cross-functional R&D team of 15+ people shipping products across web, iOS, and Android.
+     , where I joined as the 3rd employee and helped us grow to 150+ employees and $10M+ ARR. I was a software engineer for 2 years and a product manager for 4 years,
+      writing code for our MVP, owning design and implementation of core features, and leading our data analytics function. By the end, I led a
+      cross-functional R&D team of 15+ people shipping product across web, iOS, and Android. Our product helps organizations ranging from F500 to nonprofits manage policy issues using data and machine learning.
+
     </p>
     <p>
       During undergrad, I interned at{" "}
