@@ -60,12 +60,6 @@ export default ({ children }) => (
           >
             About
           </Link>
-          <OutboundLink href="https://earl.substack.com"
-            css={css`
-              padding-right: 1em;
-            `}
-          >
-            Newsletter</OutboundLink>
           <Link to={`/blog`}
             css={css`
               padding-right: 1em;
