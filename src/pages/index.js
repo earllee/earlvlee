@@ -10,17 +10,17 @@ export default ({ data }) => (
       <title>About Earl Lee</title>
     </Helmet>
     <img
-      src="/earl-at-matthews-arm.jpg"
-      alt="Earl at Matthew's Arm"
+      src="/earl-in-rome.jpg"
+      alt="Earl in Rome Italy"
     />
     <h3>Hi, my name is Earl Lee</h3>
     <p>
       Recently, I was an MS/MBA candidate at{" "}
-      <OutboundLink href="http://www.hbs.edu/ms-mba" className="bold">
+      <OutboundLink href="http://www.hbs.edu/ms-mba">
         Harvard Business School
       </OutboundLink>{" "}
       and an investor at{" "}
-      <OutboundLink href="http://www.costanoavc.com" className="bold">
+      <OutboundLink href="http://www.costanoavc.com">
         Costanoa Ventures
       </OutboundLink>
       , a Seed & Series A venture capital firm focused on enterprise software.
@@ -28,21 +28,21 @@ export default ({ data }) => (
 
     <p>
       I spent 6 years helping build B2B SaaS company{" "}
-      <OutboundLink href="https://fiscalnote.com" className="bold">
+      <OutboundLink href="https://fiscalnote.com">
         FiscalNote
       </OutboundLink>
-     , where I joined as the 3rd employee and helped us grow to 150+ employees and $10M+ ARR. I was a software engineer for 2 years and a product manager for 4 years,
+      , where I joined as the 3rd employee and helped us grow to 150+ employees and $10M+ ARR. I was a software engineer for 2 years and a product manager for 4 years,
       writing code for our MVP, owning design and implementation of core features, and leading our data analytics function. By the end, I led a
       cross-functional R&D team of 15+ people shipping product across web, iOS, and Android. Our product helps organizations ranging from F500 to nonprofits manage policy issues using data and machine learning.
 
     </p>
     <p>
       During undergrad, I interned at{" "}
-      <OutboundLink href="https://google.com" className="bold">
+      <OutboundLink href="https://google.com">
         Google
       </OutboundLink>{" "}
       as a software engineer and got my BS in Computer Science at{" "}
-      <OutboundLink href="https://yale.edu" className="bold">
+      <OutboundLink href="https://yale.edu">
         Yale
       </OutboundLink>
       .
@@ -51,11 +51,11 @@ export default ({ data }) => (
     <h3>Interests</h3>
     <p>
       I'm an avid{" "}
-      <OutboundLink href="https://instagram.com/earllifts" className="bold">
+      <OutboundLink href="https://instagram.com/earllifts">
         weightlifter
       </OutboundLink>{" "}
       and{" "}
-      <OutboundLink href="https://instagram.com/earlvlee" className="bold">
+      <OutboundLink href="https://instagram.com/earlvlee">
         photographer
       </OutboundLink>
       . One of my favorite weekend activies is to post up at a coffee shop and
