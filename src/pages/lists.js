@@ -17,7 +17,7 @@ export default ({ data }) => {
         <p><em>Lists of things I think are interesting and worth sharing.</em></p>
         <h3>Newsletters</h3>
         <p>I think editorialized newsletters are a great way to learn. They
-        take you inside the minds of sharp thinkers and how they process new
+          take you inside the minds of sharp thinkers and how they process new
           information. These are some of the ones I regularly read.</p>
         <ul>
           <li>
@@ -26,49 +26,14 @@ export default ({ data }) => {
             </OutboundLink> - Strategy and finance
           </li>
           <li>
+            <OutboundLink href="https://whatshot.substack.com/">
+              What's Hot in Enterprise IT/VC by Ed Sim
+            </OutboundLink> - Enterprise software
+          </li>
+          <li>
             <OutboundLink href="https://stratechery.com">
               Stratechery by Ben Thompson
             </OutboundLink> - Tech strategy
-          </li>
-          <li>
-            <OutboundLink href="https://alexdanco.com">
-              Alex Danco
-            </OutboundLink> - Tech and finance
-          </li>
-          <li>
-            <OutboundLink href="https://venturedesktop.substack.com">
-              Venture Desktop by Brett Bivens
-            </OutboundLink> - Tech
-          </li>
-          <li>
-            <OutboundLink href="http://eugenewei.substack.com">
-              Remains of the Day by Eugene Wei
-            </OutboundLink> - Tech, business, product, and culture
-          </li>
-          <li>
-            <OutboundLink href="https://divinations.substack.com">
-              Divinations by Nathan Baschez
-            </OutboundLink> - Strategy
-          </li>
-          <li>
-            <OutboundLink href="https://julian.digital">
-              Julian Lehr
-            </OutboundLink> - Product, tech strategy, and design
-          </li>
-          <li>
-            <OutboundLink href="http://firehose.substack.com">
-              Drinking from the Firehose by Alex Taussig
-            </OutboundLink> - Startups, VC
-          </li>
-          <li>
-            <OutboundLink href="http://link.mail.bloombergbusiness.com/join/4wm/moneystuff-signup">
-              Money Stuff by Matt Levine
-            </OutboundLink> - Finance
-          </li>
-          <li>
-            <OutboundLink href="https://www.ben-evans.com/newsletter">
-              Benedict Evans
-            </OutboundLink> - Tech, VC
           </li>
         </ul>
 
@@ -100,43 +65,22 @@ export default ({ data }) => {
             </OutboundLink> - Story of insane grit and shooting for the moon (literally)
           </li>
           <li>
-            Other book recommendation lists
-            <ul>
-              <li>
-                <em>I haven't read most of the books in these lists, but the books
-                listed seem interesting. I'd love to get to them some day. I put
-          them here as a constant reminder of how much there is to learn.</em>
-              </li>
-              <li>
-                <OutboundLink href="https://ig.ft.com/sites/business-book-award/">
-                  Financial Times
-              </OutboundLink> - Best business books by year
-            </li>
-              <li>
-                <OutboundLink href="https://medium.com/the-mission/39-book-recommendations-from-billionaire-charlie-munger-that-will-make-you-smarter-72efcbeaec77">
-                  Charlie Munger
-              </OutboundLink> - Recommendations for getting smarter
-            </li>
-              <li>
-                <OutboundLink href="http://investorfieldguide.com/the-best-per-page-books/">
-                  Patrick O'Shaughnessy
-              </OutboundLink> - Best per-page books
-            </li>
-              <li>
-                <OutboundLink href="https://medium.com/@gavin_baker/investing-book-list-5fba1b80728d">
-                  Gavin Baker
-              </OutboundLink> - Book recommendations for investing
-            </li>
-              <li>
-                <OutboundLink href="https://www.goodbooks.io/?ref=producthunt">
-                  GoodBooks.io
-              </OutboundLink> - Compilation of book recommendations from interesting people
-            </li>
-
-            </ul>
+            <OutboundLink href="https://www.goodreads.com/book/show/22535480-elon-musk">
+              Your Brain at Work by David Rock
+            </OutboundLink> - Meta read that helps you understand your thought process
           </li>
-
         </ul>
+        <p>For more book recommendations or to follow what I read, add me on <OutboundLink href="https://www.goodreads.com/user/show/46024849-earl-lee">Goodreads</OutboundLink>!</p>
+
+        <h3>Videos</h3>
+        <ul>
+          <li>
+            <OutboundLink href="https://www.netflix.com/title/80203144">
+              The Last Dance (2020)
+            </OutboundLink> - Michael Jordan and the 1990s championship Bulls team
+          </li>
+        </ul>
+
       </div>
     </Layout>
   );
