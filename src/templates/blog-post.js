@@ -12,10 +12,13 @@ export default ({ data }) => {
         <title>{post.frontmatter.title}</title>
       </Helmet>
       <div>
-        <h1>{post.frontmatter.title}</h1>
+        <h1 className="blog-post-title">{post.frontmatter.title}</h1>
+        <p className="blog-post-timestamp">
+          {post.frontmatter.date}
+        </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-    </Layout>
+    </Layout >
   );
 };
 
@@ -26,6 +29,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM D, YYYY")
       }
     }
   }
