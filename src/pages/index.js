@@ -14,39 +14,10 @@ export default ({ data }) => (
       alt="Earl in Rome Italy"
     />
     <h3>Hi, my name is Earl Lee</h3>
-    <p>
-      Recently, I was an MS/MBA candidate at{" "}
-      <OutboundLink href="http://www.hbs.edu/ms-mba">
-        Harvard Business School
-      </OutboundLink>{" "}
-      and an investor at{" "}
-      <OutboundLink href="http://www.costanoavc.com">
-        Costanoa Ventures
-      </OutboundLink>
-      , a Seed & Series A venture capital firm focused on enterprise software.
-    </p>
-
-    <p>
-      I spent 6 years helping build B2B SaaS company{" "}
-      <OutboundLink href="https://fiscalnote.com">
-        FiscalNote
-      </OutboundLink>
-      , where I joined as the 3rd employee and helped us grow to 150+ employees and $10M+ ARR. I was a software engineer for 2 years and a product manager for 4 years,
-      writing code for our MVP, owning design and implementation of core features, and leading our data analytics function. By the end, I led a
-      cross-functional R&D team of 15+ people shipping product across web, iOS, and Android. Our product helps organizations ranging from F500 to nonprofits manage policy issues using data and machine learning.
-
-    </p>
-    <p>
-      During undergrad, I interned at{" "}
-      <OutboundLink href="https://google.com">
-        Google
-      </OutboundLink>{" "}
-      as a software engineer and got my BS in Computer Science at{" "}
-      <OutboundLink href="https://yale.edu">
-        Yale
-      </OutboundLink>
-      .
-    </p>
+    <p>I'm the CEO & Co-Founder of <OutboundLink href="https://www.headsup.ai">HeadsUp</OutboundLink>. We help product-led SaaS companies nurture and convert users by using data and machine learning to understand users' likelihood to pay and how they use a product. Our product then seamlessly provides this context for sales reps to act on so the business can drive higher conversion rates and net dollar retention. To learn more, read about us on <OutboundLink href="https://techcrunch.com/2022/09/28/headsup-helps-plg-sales-teams-understand-how-and-when-to-sell/">TechCrunch</OutboundLink>.</p>
+    <p>Previously, I spent 6 years building <OutboundLink href="https://fiscalnote.com">FiscalNote</OutboundLink> (NYSE: NOTE). As employee #3, I helped the company grow to 150+ employees and $10M+ ARR, built the initial MVP as a software engineer, and iterated toward product-market fit and scale as a product manager. Most importantly, I founded the growth and analytics function there, inspiring me to start HeadsUp.</p>
+    <p>While exploring what to build after FiscalNote, I spent time as an MS/MBA candidate at <OutboundLink href="https://www.hbs.edu/mba/academic-experience/joint-degree-programs/Pages/ms-mba-engineering-sciences.aspx">Harvard Business School</OutboundLink> and a fellow at <OutboundLink href="https://costanoavc.com">Costanoa Ventures</OutboundLink>, where I worked on deals across a wide range of Seed, Series A, and even follow-on Series B B2B SaaS investments.</p>
+    <p>I'm a software engineer by training, having received my BS in Computer Science at <OutboundLink href="https://yale.edu/">Yale</OutboundLink> and interning at <OutboundLink href="https://www.google.com">Google</OutboundLink> as an undergrad.</p>
 
     <h3>Interests</h3>
     <p>
