@@ -35,6 +35,26 @@ export default ({ data }) => {
               Stratechery by Ben Thompson
             </OutboundLink> - Tech strategy
           </li>
+          <li>
+            <OutboundLink href="https://benn.substack.com">
+              Benn Stancil
+            </OutboundLink> - Data ecosystem
+          </li>
+          <li>
+            <OutboundLink href="https://newsletter.pragmaticengineer.com">
+              The Pragmatic Engineer by Gergely Orosz
+            </OutboundLink> - Inside pulse on SV software engineering
+          </li>
+          <li>
+            <OutboundLink href="https://www.techmeme.com">
+              TechMeme
+            </OutboundLink> - Digest on all things tech
+          </li>
+          <li>
+            <OutboundLink href="https://whoisnnamdi.com">
+              Who Is Nnamdi by Nnamdi Iregbulem
+            </OutboundLink> - Data-driven perspective on tech investing
+          </li>
         </ul>
 
         <h3>Books</h3>
@@ -42,7 +62,7 @@ export default ({ data }) => {
           <li>
             <OutboundLink href="https://www.goodreads.com/book/show/4030991-shoe-dog">
               Shoe Dog by Phil Knight
-            </OutboundLink> - Incredible entrepreneurship story
+            </OutboundLink> - Captures the essence of entrepreneurship
           </li>
           <li>
             <OutboundLink href="https://www.goodreads.com/book/show/16144575-how-asia-works">
@@ -61,16 +81,20 @@ export default ({ data }) => {
           </li>
           <li>
             <OutboundLink href="https://www.goodreads.com/book/show/22535480-elon-musk">
-              Elon Musk by Ashlee Vance
-            </OutboundLink> - Story of insane grit and shooting for the moon (literally)
+              Your Brain at Work by David Rock
+            </OutboundLink> - Understand your thought process better
           </li>
           <li>
-            <OutboundLink href="https://www.goodreads.com/book/show/22535480-elon-musk">
-              Your Brain at Work by David Rock
-            </OutboundLink> - Meta read that helps you understand your thought process
+            <OutboundLink href="https://www.goodreads.com/book/show/41795733-range">
+              Range by David Epstein
+            </OutboundLink> - Why being a jack of all trades helps excel in many domains 
+          </li>
+          <li>
+            <OutboundLink href="https://www.goodreads.com/book/show/31869155-the-captain-class">
+              The Captain Class by Sam Walker 
+            </OutboundLink> - Unique take on what makes great vs. dynastic teams
           </li>
         </ul>
-        <p>For more book recommendations or to follow what I read, add me on <OutboundLink href="https://www.goodreads.com/user/show/46024849-earl-lee">Goodreads</OutboundLink>!</p>
 
         <h3>Videos</h3>
         <ul>
