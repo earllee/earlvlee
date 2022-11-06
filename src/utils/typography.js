@@ -11,8 +11,8 @@ kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
     },
     a: {
         textDecoration: "none",
-        // color: "#00356B" // Yale Blue
-        color: "#A51C30", // Harvard Crimson
+        color: "#00356B" // Yale Blue
+        // color: "#A51C30", // Harvard Crimson
         // color: "#9f392b", // Original
     },
 });
