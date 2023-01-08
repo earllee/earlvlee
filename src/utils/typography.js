@@ -4,7 +4,7 @@ import kirkhamTheme from "typography-theme-kirkham";
 kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
     body: {
         fontFamily: "'Helvetica Neue', sans-serif",
-        fontSize: "0.9em",
+        fontSize: "0.8em",
     },
     "h1,h2,h3,h4,h5,h6": {
         fontFamily: "'Ibarra Real Nova', serif",
