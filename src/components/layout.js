@@ -60,12 +60,12 @@ export default ({ children }) => (
           >
             About
           </Link>
-          <Link to={`/blog`}
+          {/* <Link to={`/blog`}
             css={css`
               padding-right: 1em;
             `}
           >
-            Blog</Link>
+            Blog</Link> */}
           <Link to={`/lists`}>Lists</Link>
         </div>
         {children}
