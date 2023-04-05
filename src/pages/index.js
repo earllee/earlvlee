@@ -24,13 +24,16 @@ export default ({ data }) => (
       I'm an avid{" "}
       <OutboundLink href="https://instagram.com/earllifts">
         weightlifter
-      </OutboundLink>{" "}
+      </OutboundLink>{", "}
+      <OutboundLink href="https://www.strava.com/athletes/6698249">
+        runner
+      </OutboundLink>{", "}
       and{" "}
       <OutboundLink href="https://instagram.com/earlvlee">
         photographer
       </OutboundLink>
       . One of my favorite weekend activies is to post up at a coffee shop and
-      read or write code. In the absence of a coffee shop, I like to make my
+      read, think, and tinker. In the absence of a coffee shop, I like to make my
       own pourovers.
     </p>
 
