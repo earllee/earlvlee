@@ -1,6 +1,7 @@
 ---
 title: "From DC to SF to Boston"
 date: "2019-04-18"
+excerpt: "After nearly six years, I left FiscalNote last month. Now, I'm excited to join Costanoa Ventures in the San Francisco Bay Area for an internship before starting the next chapter of my life as an MS/MBA candidate at the Harvard Business School and the School of Engineering and Applied Sciences."
 ---
 
 ![Earl Lee last day at FiscalNote](/earl-last-day-at-fiscalnote.jpg)

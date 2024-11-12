@@ -31,10 +31,6 @@ export default ({ data }) => {
           <div key={node.id}>
             <Link
               to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
             >
               <h3
                 css={css`
@@ -51,7 +47,7 @@ export default ({ data }) => {
                 </span>
               </h3>
             </Link>
-            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.excerpt ? node.frontmatter.excerpt : node.excerpt}</p>
           </div>
         ))}
       </div>
@@ -69,6 +65,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            excerpt
           }
           fields {
             slug

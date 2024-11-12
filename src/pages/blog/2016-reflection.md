@@ -1,6 +1,7 @@
 ---
 title: "2016 Reflection"
 date: "2017-02-25"
+excerpt: "2016 was a tumultuous year for the world, with Brexit and Trump’s rise to the presidency erupting a new normal, but amidst the chaos, 2016 turned out to be both exciting and calming for me. I grew to love DC, made a handful of new friends, visited Berlin, Yosemite, Hong Kong, and Bejing, and got into the habit of consistently reading. Of course, it wasn’t all perfect, but I’m appreciative the lessons I learned along the way and how all these experiences, both good and bad, have helped me develop clarity and resolve around how I want to grow in the future."
 ---
 
 ![Earl Lee in London at Earl's Court](/earl-lee-in-london-earls-court.jpg) 2016 was a tumultuous year for the world, with Brexit and Trump’s rise to the presidency erupting a new normal, but amidst the chaos, 2016 turned out to be both exciting and calming for me. I grew to love DC, made a handful of new friends, visited Berlin, Yosemite, Hong Kong, and Bejing, and got into the habit of consistently reading. Of course, it wasn’t all perfect, but I’m appreciative the lessons I learned along the way and how all these experiences, both good and bad, have helped me develop clarity and resolve around how I want to grow in the future. Let’s start with 3 realizations:

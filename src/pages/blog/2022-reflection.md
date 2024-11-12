@@ -1,6 +1,7 @@
 ---
 title: "2022 Reflection"
 date: "2023-01-08"
+excerpt: "2022 was filled with a lot of ups and down, the most in the past few years which says a lot given those were COVID years. I’m very grateful, though, because the highs were good and the lows a good lesson and time for reflection."
 ---
 
 2022 was filled with a lot of ups and down, the most in the past few years which says a lot given those were COVID years. I’m very grateful, though, because the highs were good and the lows a good lesson and time for reflection. I want to share a couple learnings and the goals I had set for this past year as well as outline the ones I am setting for this upcoming year.

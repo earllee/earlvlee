@@ -10,11 +10,11 @@ kirkhamTheme.overrideStyles = ({ rhythm }, options) => ({
         fontFamily: "'Ibarra Real Nova', serif",
     },
     a: {
-        textDecoration: "none",
-        // color: "#00356B" // Yale Blue
-        color: "#A51C30", // Harvard Crimson
+        // textDecoration: "none",
+        color: "#00356B" // Yale Blue
+        // color: "#A51C30", // Harvard Crimson
         // color: "#9f392b", // Original
-    },
+    }
 });
 
 kirkhamTheme.googleFonts = [{

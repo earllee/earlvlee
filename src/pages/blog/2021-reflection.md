@@ -1,6 +1,7 @@
 ---
 title: "2021 Reflection"
 date: "2022-01-02"
+excerpt: "2021 was a year of transition, both personally and professionally. I left HBS to found HeadsUp and move to San Francisco."
 ---
 
 Friends,

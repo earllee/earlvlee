@@ -1,6 +1,7 @@
 ---
 title: "2017 Reflection"
 date: "2018-01-27"
+excerpt: "I hit some goals like reading more and working on coding projects, but others, like monetizing my photography, didn’t quite land. I learned a lot about focus, balancing time, and how travel fuels fresh ideas. For 2018, I’m keeping it simple: launch a new project, read 18 books, hit some new lifting PRs, meet more people, and complete five side projects. Excited to see where these goals take me!"
 ---
 
 ![Earl in Japan](/earl-lee-in-tokyo-japan.jpg)

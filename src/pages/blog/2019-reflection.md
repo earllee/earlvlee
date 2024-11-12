@@ -1,6 +1,7 @@
 ---
 title: "2019: Fall-Tinted Forest"
 date: "2020-01-01"
+excerpt: "2019 was a transformative year, a sliver of which I would have predicted a year earlier."
 ---
 
 ![Acadia National Park during the fall](/yellow-acadia.jpg)

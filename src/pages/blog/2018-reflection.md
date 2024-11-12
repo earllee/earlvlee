@@ -1,6 +1,7 @@
 ---
 title: "2018 Reflection"
 date: "2019-02-10"
+excerpt: "2018 was an incredible year. Certainly not the easiest but when has incredible ever been easy? This year, I went from not programming since 2015 to coding 40 hours a week on top of a full-time job, vaguely considering business school to cramming for the GRE and applying, and leading a team of 5 on the FiscalNote mobile app to a team of almost 20 across web & mobile engineering, design, and QA."
 ---
 
 ![Earl Lee in Paris](/earl-lee-in-paris.jpg)

@@ -30,7 +30,7 @@ export default ({ children }) => (
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Earl Lee is the CEO of HeadsUp. He was previously the 3rd hire at FiscalNote (NYSE: NOTE) where he led growth and analytics."
+            content="Earl Lee is a tech entrepreneur and investor. He founded HeadsUp ($8.3M raised), invested at Costanoa Ventures, and was the 3rd hire at FiscalNote (NYSE: NOTE)."
           />
           <title>Earl Lee</title>
           <link rel="canonical" href="https://earlvlee.com/" />
@@ -60,12 +60,12 @@ export default ({ children }) => (
           >
             About
           </Link>
-          {/* <Link to={`/blog`}
+          <Link to={`/blog`}
             css={css`
               padding-right: 1em;
             `}
           >
-            Blog</Link> */}
+            Blog</Link>
           <Link to={`/lists`}>Lists</Link>
         </div>
         {children}
