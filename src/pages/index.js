@@ -7,7 +7,7 @@ import { SocialIcon } from "react-social-icons";
 export default ({ data }) => (
   <Layout>
     <Helmet>
-      <title>The other Earl Lee, not the conductor, the one in tech 😄</title>
+      <title>The Earl Lee in tech, not the conductor 😄</title>
     </Helmet>
     <img
       src="/earl-in-japan.jpg"
