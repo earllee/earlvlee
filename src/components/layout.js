@@ -30,7 +30,7 @@ export default ({ children }) => (
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Earl Lee is a tech entrepreneur and investor. He founded HeadsUp ($8.3M raised), invested at Costanoa Ventures, and was the 3rd hire at FiscalNote (NYSE: NOTE)."
+            content="Earl Lee is a tech entrepreneur and investor. He founded HeadsUp ($8.3M raised) and was wthe 3rd hire at FiscalNote (NYSE: NOTE)."
           />
           <title>Earl Lee</title>
           <link rel="canonical" href="https://earlvlee.com/" />
