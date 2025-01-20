@@ -1,7 +1,7 @@
 ---
 title: "2025 Predictions in Health & Fitness"
 date: "2025-01-20"
-excerpt: "Microplastics aversion, Hyrox & hybrid fitness, and precision testing"
+excerpt: "Microplastics aversion, HYROX & hybrid fitness, and precision testing"
 ---
 
 It’s been a while since I’ve posted here, but one of my 2025 goals is to more consistently create content about things I'm passionate about. Fitness is definitely one of them if not the most prominent one. To kick things of, I wanted to share a few trends I think have been shaping up over the past year and will likely continue to grow or break out in 2025.
