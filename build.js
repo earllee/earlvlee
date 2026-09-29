@@ -6,12 +6,16 @@ const { marked } = require("marked");
 const POSTS = path.join(__dirname, "posts");
 const OUT = path.join(__dirname, "dist");
 
-const HEAD = (title) => `<!DOCTYPE html>
+const DESCRIPTION = "Earl Lee is a tech entrepreneur and investor. He founded HeadsUp ($8.3M raised) and was the 3rd hire at FiscalNote (NYSE: NOTE).";
+
+const HEAD = (title, url) => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
+    <meta name="description" content="${DESCRIPTION}">
+    <link rel="canonical" href="https://earlvlee.com${url}">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -62,7 +66,7 @@ const posts = fs.readdirSync(POSTS).filter((f) => f.endsWith(".md")).map(parse)
 for (const p of posts) {
   const dir = path.join(OUT, "blog", p.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), HEAD(escape(p.meta.title)) +
+  fs.writeFileSync(path.join(dir, "index.html"), HEAD(escape(p.meta.title), `/blog/${p.slug}/`) +
     `    <h1>${escape(p.meta.title)}</h1>
     <p><em>${formatDate(p.meta.date)}</em></p>
 
@@ -73,7 +77,7 @@ ${marked.parse(p.body).replace(/<(\/?)h([1-5])>/g, (_, c, n) => `<${c}h${+n + 1}
 `);
 }
 
-fs.writeFileSync(path.join(OUT, "blog", "index.html"), HEAD("Earl's Blog") +
+fs.writeFileSync(path.join(OUT, "blog", "index.html"), HEAD("Earl's Blog", "/blog/") +
   `    <h1>Earl's Blog</h1>
     <ul>
 ${posts.map((p) => `        <li><a href="/blog/${p.slug}/">${escape(p.meta.title)}</a> - ${formatDate(p.meta.date)}</li>`).join("\n")}
