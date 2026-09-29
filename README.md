@@ -1,21 +1,7 @@
-# Earl Lee
+# earlvlee.com
 
-Earl's personal website built using Gatsby.js.
+Plain static site, deployed on Netlify (`netlify.toml`).
 
-## Why
-
-This is cool because everything including posts and photos will be packaged into one portable static website. No more WordPress!
-
-# Roadmap
-
-- Restructure site into blog
-- Add randomized header image
-- Add about
-- Add social media profile icons
-- Stream Twitter
-- Stream Instagram
-
-# Log
-
-- 2024-11-12: Need to upgrade Google Analytics to GA4 (in upgrade-ga branch). Also need to upgrade from Gatsby v2 to v5.
-  - Gatsby v2 doesn't work well with Node v17+ because of some issue with OpenSSL so need to run Node v16.
+- `public/` — hand-written pages (`index.html`, `lists.html`) and images, copied as-is
+- `posts/*.md` — blog posts (frontmatter: `title`, `date`, optional `draft: true`)
+- `build.js` — renders posts to `dist/blog/<slug>/` and a `/blog/` index; run `npm run build`
