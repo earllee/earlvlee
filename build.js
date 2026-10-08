@@ -72,6 +72,7 @@ for (const p of posts) {
 
 ${marked.parse(p.body).replace(/<(\/?)h([1-5])>/g, (_, c, n) => `<${c}h${+n + 1}>`)}
     <p><a href="/blog/">← Back to blog</a></p>
+    <script src="/effects.js"></script>
 </body>
 </html>
 `);
@@ -84,6 +85,7 @@ ${posts.map((p) => `        <li><a href="/blog/${p.slug}/">${escape(p.meta.title
     </ul>
 
     <p><a href="/">← Back to home</a></p>
+    <script src="/effects.js"></script>
 </body>
 </html>
 `);
