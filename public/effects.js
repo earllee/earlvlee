@@ -1,5 +1,5 @@
 // Text effects adapted from github.com/earllee/blocks: text scrambles in on load,
-// scrambles out before navigating, scrambles around a hovered link, and glyphs
+// reforms into the next page on navigation, scrambles on link hover, and glyphs
 // trail the cursor and fly out of it while scrolling.
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -43,8 +43,9 @@
   }
 
   // Characters settle left to right over `duration` ms (plus random `jitter`).
-  // In: scrambled -> original. Out: original -> scrambled.
-  function scramble(nodes, { duration, jitter, out = false }, done) {
+  // In: scrambled -> original. Out: original -> scrambled, and with `hold` the
+  // scrambled text keeps churning until the nodes are replaced or reclaimed.
+  function scramble(nodes, { duration, jitter, out = false, hold = false }, done) {
     const token = {}
     const items = nodes.map((node) => {
       if (!originals.has(node)) originals.set(node, Array.from(node.nodeValue))
@@ -64,18 +65,24 @@
 
     function frame(now) {
       const t = now - start
-      if (t < end && now - last < TICK_MS) return requestAnimationFrame(frame)
+      const running = t < end || hold
+      if (running && now - last < TICK_MS) return requestAnimationFrame(frame)
       last = now
+      let live = false
       for (const it of items) {
-        if (owners.get(it.node) !== token) continue
+        if (owners.get(it.node) !== token || !it.node.isConnected) continue
+        live = true
         let s = ''
         for (let i = 0; i < it.chars.length; i++) {
           s += t >= it.settleAt[i] !== out ? it.chars[i] : randomLike(it.chars[i])
         }
         it.node.nodeValue = s
       }
-      if (t < end) requestAnimationFrame(frame)
-      else if (done) done()
+      if (t >= end && done) {
+        done()
+        done = null
+      }
+      if (running && live) requestAnimationFrame(frame)
     }
     frame(start) // paint the first scrambled state before the browser does
   }
@@ -83,31 +90,76 @@
   const intro = () => scramble(textNodes(document.body, true), { duration: 450, jitter: 200 })
   intro()
 
-  // Stop any animation on these nodes and show their original text.
-  function settle(nodes) {
-    for (const node of nodes) {
-      owners.set(node, null)
-      if (originals.has(node)) node.nodeValue = originals.get(node).join('')
-    }
-  }
-
-  // Hovering a link keeps it readable while everything around it scrambles.
-  // Scrambled text reflows, which can slide the link out from under a still
-  // cursor and back, so re-entering the same link is ignored for a moment.
+  // Scrambling a link changes its width, which can slide it out from under a
+  // still cursor and back, so re-entering the same link is ignored for a moment.
   const HOVER_COOLDOWN_MS = 800
-  let leaving = false
+  let navigating = false
   let hovered = null
   let hoveredAt = 0
   document.addEventListener('mouseover', (e) => {
     const a = e.target.closest && e.target.closest('a[href]')
-    if (!a || leaving || a.contains(e.relatedTarget)) return
+    if (!a || navigating || a.contains(e.relatedTarget)) return
     const now = performance.now()
     if (a === hovered && now - hoveredAt < HOVER_COOLDOWN_MS) return
     hovered = a
     hoveredAt = now
-    settle(textNodes(a))
-    scramble(textNodes(document.body, true).filter((n) => !a.contains(n)), { duration: 300, jitter: 150 })
+    scramble(textNodes(a), { duration: 220, jitter: 120 })
   })
+
+  // --- Page transitions -------------------------------------------------------
+
+  // Same-origin pages are fetched and swapped in place, so the current text
+  // scrambles straight into the next page's text with no blank load in between.
+  // Anything else (other sites, pages with their own scripts) scrambles out and
+  // falls back to a normal navigation.
+  let navId = 0
+  let current = new URL(location.href)
+
+  const samePage = (url) => url.origin === location.origin && url.pathname === location.pathname && url.search === location.search
+
+  async function navigate(url, push) {
+    const id = ++navId
+    navigating = true
+    const scrambled = new Promise((resolve) =>
+      scramble(textNodes(document.body, true), { duration: 180, jitter: 80, out: true, hold: true }, resolve))
+
+    let doc, finalUrl
+    try {
+      if (url.origin !== location.origin) throw new Error('external')
+      const res = await fetch(url.href)
+      finalUrl = new URL(res.url)
+      if (!res.ok || finalUrl.origin !== location.origin || !(res.headers.get('content-type') || '').includes('text/html')) {
+        throw new Error('not a page')
+      }
+      doc = new DOMParser().parseFromString(await res.text(), 'text/html')
+      if ([...doc.scripts].some((s) => s.getAttribute('src') !== '/effects.js')) throw new Error('has scripts')
+      finalUrl.hash = url.hash
+    } catch {
+      await scrambled
+      if (id === navId) location.assign(url.href)
+      return
+    }
+    await scrambled
+    if (id !== navId) return
+
+    history.scrollRestoration = 'manual' // swapped pages restore their own scroll
+    if (push) {
+      history.replaceState({ scrollY }, '')
+      history.pushState(null, '', finalUrl.href)
+    }
+    current = new URL(location.href)
+    document.title = doc.title
+    document.head.replaceChildren(...doc.head.childNodes)
+    document.body.replaceChildren(...doc.body.childNodes)
+
+    const target = finalUrl.hash && document.getElementById(decodeURIComponent(finalUrl.hash.slice(1)))
+    if (target) target.scrollIntoView()
+    else scrollTo(0, (!push && history.state && history.state.scrollY) || 0)
+
+    navigating = false
+    hovered = null
+    intro()
+  }
 
   document.addEventListener('click', (e) => {
     const a = e.target.closest && e.target.closest('a[href]')
@@ -115,18 +167,23 @@
     if ((a.target && a.target !== '_self') || a.hasAttribute('download')) return
     const url = new URL(a.href, location.href)
     if (!/^https?:$/.test(url.protocol)) return
-    if (url.hash && url.origin + url.pathname + url.search === location.origin + location.pathname + location.search) return
+    if (url.hash && samePage(url)) return
 
     e.preventDefault()
-    if (leaving) return
-    leaving = true
-    scramble(textNodes(document.body, true), { duration: 180, jitter: 80, out: true }, () => location.assign(url.href))
+    navigate(url, true)
   })
 
-  // Back/forward cache restores the scrambled-out page; scramble it back in.
+  addEventListener('popstate', () => {
+    const url = new URL(location.href)
+    const hashOnly = url.pathname === current.pathname && url.search === current.search
+    current = url
+    if (!hashOnly) navigate(url, false)
+  })
+
+  // Back/forward cache restores a page that was scrambled out; scramble it back in.
   addEventListener('pageshow', (e) => {
     if (!e.persisted) return
-    leaving = false
+    navigating = false
     intro()
   })
 
@@ -152,8 +209,8 @@
       canvas = document.createElement('canvas')
       canvas.setAttribute('aria-hidden', 'true')
       canvas.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:9999'
-      document.body.appendChild(canvas)
     }
+    if (!canvas.isConnected) document.body.appendChild(canvas) // page swaps replace the body
     if (!sized) {
       const dpr = Math.min(devicePixelRatio || 1, 2)
       canvas.width = innerWidth * dpr
