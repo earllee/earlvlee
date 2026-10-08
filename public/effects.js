@@ -1,6 +1,5 @@
-// Text effects adapted from github.com/earllee/blocks: text scrambles in on load,
-// reforms into the next page on navigation, and glyphs fly out of the cursor
-// while scrolling.
+// Text effects adapted from github.com/earllee/blocks: text reforms into the
+// next page on navigation, and glyphs fly out of the cursor while scrolling.
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
@@ -87,8 +86,8 @@
     frame(start) // paint the first scrambled state before the browser does
   }
 
+  // A fresh page load shows its text immediately; only in-site navigation scrambles in.
   const intro = () => scramble(textNodes(document.body, true), { duration: 450, jitter: 200 })
-  intro()
 
   // --- Page transitions -------------------------------------------------------
 
