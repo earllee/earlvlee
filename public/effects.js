@@ -1,6 +1,6 @@
 // Text effects adapted from github.com/earllee/blocks: text scrambles in on load,
-// reforms into the next page on navigation, scrambles on link hover, and glyphs
-// trail the cursor and fly out of it while scrolling.
+// reforms into the next page on navigation, and glyphs fly out of the cursor
+// while scrolling.
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
@@ -90,22 +90,6 @@
   const intro = () => scramble(textNodes(document.body, true), { duration: 450, jitter: 200 })
   intro()
 
-  // Scrambling a link changes its width, which can slide it out from under a
-  // still cursor and back, so re-entering the same link is ignored for a moment.
-  const HOVER_COOLDOWN_MS = 800
-  let navigating = false
-  let hovered = null
-  let hoveredAt = 0
-  document.addEventListener('mouseover', (e) => {
-    const a = e.target.closest && e.target.closest('a[href]')
-    if (!a || navigating || a.contains(e.relatedTarget)) return
-    const now = performance.now()
-    if (a === hovered && now - hoveredAt < HOVER_COOLDOWN_MS) return
-    hovered = a
-    hoveredAt = now
-    scramble(textNodes(a), { duration: 220, jitter: 120 })
-  })
-
   // --- Page transitions -------------------------------------------------------
 
   // Same-origin pages are fetched and swapped in place, so the current text
@@ -119,7 +103,6 @@
 
   async function navigate(url, push) {
     const id = ++navId
-    navigating = true
     const scrambled = new Promise((resolve) =>
       scramble(textNodes(document.body, true), { duration: 180, jitter: 80, out: true, hold: true }, resolve))
 
@@ -156,8 +139,6 @@
     if (target) target.scrollIntoView()
     else scrollTo(0, (!push && history.state && history.state.scrollY) || 0)
 
-    navigating = false
-    hovered = null
     intro()
   }
 
@@ -183,7 +164,6 @@
   // Back/forward cache restores a page that was scrambled out; scramble it back in.
   addEventListener('pageshow', (e) => {
     if (!e.persisted) return
-    navigating = false
     intro()
   })
 
@@ -278,36 +258,6 @@
       emit(e.clientX, e.clientY, (Math.random() - 0.5) * 60, dir * (60 + speed * 0.8 + Math.random() * 40))
     }
   }, { passive: true })
-
-  // Moving the cursor leaves a trail of glyphs that drift back and fall away.
-  const TRAIL_SPACING = 14
-  let trailX = null
-  let trailY = 0
-  addEventListener('pointermove', (e) => {
-    if (e.pointerType !== 'mouse') return
-    if (trailX === null) {
-      trailX = e.clientX
-      trailY = e.clientY
-      return
-    }
-    const dx = e.clientX - trailX
-    const dy = e.clientY - trailY
-    const dist = Math.hypot(dx, dy)
-    if (dist < TRAIL_SPACING) return
-    const steps = Math.min(Math.floor(dist / TRAIL_SPACING), 6)
-    for (let i = 1; i <= steps; i++) {
-      const t = i / steps
-      emit(
-        trailX + dx * t,
-        trailY + dy * t,
-        (-dx / dist) * 20 + (Math.random() - 0.5) * 30,
-        (-dy / dist) * 20 + (Math.random() - 0.5) * 30,
-      )
-    }
-    trailX = e.clientX
-    trailY = e.clientY
-  }, { passive: true })
-  document.addEventListener('mouseout', (e) => { if (!e.relatedTarget) trailX = null })
 
   addEventListener('resize', () => { sized = false })
 })()
