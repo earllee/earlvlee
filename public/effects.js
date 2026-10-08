@@ -1,6 +1,6 @@
 // Text effects adapted from github.com/earllee/blocks: text scrambles in on load,
-// scrambles out before navigating, scrambles on link hover, and glyphs fly out
-// of the cursor while scrolling.
+// scrambles out before navigating, scrambles around a hovered link, and glyphs
+// trail the cursor and fly out of it while scrolling.
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
@@ -83,13 +83,32 @@
   const intro = () => scramble(textNodes(document.body, true), { duration: 450, jitter: 200 })
   intro()
 
+  // Stop any animation on these nodes and show their original text.
+  function settle(nodes) {
+    for (const node of nodes) {
+      owners.set(node, null)
+      if (originals.has(node)) node.nodeValue = originals.get(node).join('')
+    }
+  }
+
+  // Hovering a link keeps it readable while everything around it scrambles.
+  // Scrambled text reflows, which can slide the link out from under a still
+  // cursor and back, so re-entering the same link is ignored for a moment.
+  const HOVER_COOLDOWN_MS = 800
+  let leaving = false
+  let hovered = null
+  let hoveredAt = 0
   document.addEventListener('mouseover', (e) => {
     const a = e.target.closest && e.target.closest('a[href]')
-    if (!a || a.contains(e.relatedTarget)) return
-    scramble(textNodes(a), { duration: 220, jitter: 120 })
+    if (!a || leaving || a.contains(e.relatedTarget)) return
+    const now = performance.now()
+    if (a === hovered && now - hoveredAt < HOVER_COOLDOWN_MS) return
+    hovered = a
+    hoveredAt = now
+    settle(textNodes(a))
+    scramble(textNodes(document.body, true).filter((n) => !a.contains(n)), { duration: 300, jitter: 150 })
   })
 
-  let leaving = false
   document.addEventListener('click', (e) => {
     const a = e.target.closest && e.target.closest('a[href]')
     if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
@@ -182,31 +201,56 @@
     animId = requestAnimationFrame(tick)
   }
 
-  addEventListener('wheel', (e) => {
-    const now = performance.now()
-    if (now - lastBurst < THROTTLE_MS) return
-    lastBurst = now
+  function emit(x, y, vx, vy) {
     ensureCanvas()
-
-    const dir = e.deltaY > 0 ? -1 : 1
-    const speed = Math.min(Math.abs(e.deltaY), 200)
-    for (let i = 0; i < BURST_COUNT; i++) {
-      const life = 0.6 + Math.random() * 0.2
-      sparks.push({
-        x: e.clientX,
-        y: e.clientY,
-        vx: (Math.random() - 0.5) * 60,
-        vy: dir * (60 + speed * 0.8 + Math.random() * 40),
-        char: pick(CHARS),
-        life,
-        maxLife: life,
-      })
-    }
+    const life = 0.6 + Math.random() * 0.2
+    sparks.push({ x, y, vx, vy, char: pick(CHARS), life, maxLife: life })
     if (animId === null) {
       lastTime = 0
       animId = requestAnimationFrame(tick)
     }
+  }
+
+  addEventListener('wheel', (e) => {
+    const now = performance.now()
+    if (now - lastBurst < THROTTLE_MS) return
+    lastBurst = now
+    const dir = e.deltaY > 0 ? -1 : 1
+    const speed = Math.min(Math.abs(e.deltaY), 200)
+    for (let i = 0; i < BURST_COUNT; i++) {
+      emit(e.clientX, e.clientY, (Math.random() - 0.5) * 60, dir * (60 + speed * 0.8 + Math.random() * 40))
+    }
   }, { passive: true })
+
+  // Moving the cursor leaves a trail of glyphs that drift back and fall away.
+  const TRAIL_SPACING = 14
+  let trailX = null
+  let trailY = 0
+  addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return
+    if (trailX === null) {
+      trailX = e.clientX
+      trailY = e.clientY
+      return
+    }
+    const dx = e.clientX - trailX
+    const dy = e.clientY - trailY
+    const dist = Math.hypot(dx, dy)
+    if (dist < TRAIL_SPACING) return
+    const steps = Math.min(Math.floor(dist / TRAIL_SPACING), 6)
+    for (let i = 1; i <= steps; i++) {
+      const t = i / steps
+      emit(
+        trailX + dx * t,
+        trailY + dy * t,
+        (-dx / dist) * 20 + (Math.random() - 0.5) * 30,
+        (-dy / dist) * 20 + (Math.random() - 0.5) * 30,
+      )
+    }
+    trailX = e.clientX
+    trailY = e.clientY
+  }, { passive: true })
+  document.addEventListener('mouseout', (e) => { if (!e.relatedTarget) trailX = null })
 
   addEventListener('resize', () => { sized = false })
 })()
