@@ -87,7 +87,7 @@
   }
 
   // A fresh page load shows its text immediately; only in-site navigation scrambles in.
-  const intro = () => scramble(textNodes(document.body, true), { duration: 450, jitter: 200 })
+  const intro = () => scramble(textNodes(document.body, true), { duration: 250, jitter: 100 })
 
   // --- Page transitions -------------------------------------------------------
 
@@ -100,20 +100,50 @@
 
   const samePage = (url) => url.origin === location.origin && url.pathname === location.pathname && url.search === location.search
 
+  // Pages are prefetched when a link is hovered or touched, so most clicks
+  // swap as soon as the brief scramble-out finishes.
+  const pages = new Map() // url without hash -> Promise<{ html, url }>
+  function fetchPage(url) {
+    const key = url.origin + url.pathname + url.search
+    if (!pages.has(key)) {
+      const page = fetch(key).then(async (res) => {
+        const finalUrl = new URL(res.url)
+        if (!res.ok || finalUrl.origin !== location.origin || !(res.headers.get('content-type') || '').includes('text/html')) {
+          throw new Error('not a page')
+        }
+        return { html: await res.text(), url: finalUrl }
+      })
+      page.catch(() => pages.delete(key))
+      pages.set(key, page)
+    }
+    return pages.get(key)
+  }
+
+  function linkUrl(target) {
+    const a = target.closest && target.closest('a[href]')
+    if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return null
+    const url = new URL(a.href, location.href)
+    return /^https?:$/.test(url.protocol) ? url : null
+  }
+
+  function prefetch(e) {
+    const url = linkUrl(e.target)
+    if (url && url.origin === location.origin && !samePage(url)) fetchPage(url).catch(() => {})
+  }
+  document.addEventListener('mouseover', prefetch)
+  document.addEventListener('touchstart', prefetch, { passive: true })
+
   async function navigate(url, push) {
     const id = ++navId
     const scrambled = new Promise((resolve) =>
-      scramble(textNodes(document.body, true), { duration: 180, jitter: 80, out: true, hold: true }, resolve))
+      scramble(textNodes(document.body, true), { duration: 80, jitter: 40, out: true, hold: true }, resolve))
 
     let doc, finalUrl
     try {
       if (url.origin !== location.origin) throw new Error('external')
-      const res = await fetch(url.href)
-      finalUrl = new URL(res.url)
-      if (!res.ok || finalUrl.origin !== location.origin || !(res.headers.get('content-type') || '').includes('text/html')) {
-        throw new Error('not a page')
-      }
-      doc = new DOMParser().parseFromString(await res.text(), 'text/html')
+      const page = await fetchPage(url)
+      finalUrl = new URL(page.url)
+      doc = new DOMParser().parseFromString(page.html, 'text/html')
       if ([...doc.scripts].some((s) => s.getAttribute('src') !== '/effects.js')) throw new Error('has scripts')
       finalUrl.hash = url.hash
     } catch {
@@ -142,12 +172,9 @@
   }
 
   document.addEventListener('click', (e) => {
-    const a = e.target.closest && e.target.closest('a[href]')
-    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
-    if ((a.target && a.target !== '_self') || a.hasAttribute('download')) return
-    const url = new URL(a.href, location.href)
-    if (!/^https?:$/.test(url.protocol)) return
-    if (url.hash && samePage(url)) return
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+    const url = linkUrl(e.target)
+    if (!url || (url.hash && samePage(url))) return
 
     e.preventDefault()
     navigate(url, true)
